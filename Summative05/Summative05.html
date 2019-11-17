@@ -1,0 +1,510 @@
+<!doctype html>
+<html lang="en">
+
+<!-- 2/22/2019 PgP this is the new model assignment, containing split constants files, new One-Drive Path, new location for support files -->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap -->
+    <link href="../../ReadOnly/bootstrap.css" rel="stylesheet">
+
+    <!-- constant file to update email, firstname, lastname, starid, section on students' pages -->
+    <script src="../constants.js"></script>
+    <script src="../../ReadOnly/CourseConstants.js"></script>
+
+    <!-- model assignment file, version 1 released 2018/02/18 PgP -->
+
+    <title>MIS362 Summative05</title>
+</head>
+
+<body class="container-fluid" onload="setVariables()">
+
+    <form class="container-fluid" action="https://eprofessor.azurewebsites.net/code/ProcessFormData.asp" method="post" name="frmAssignment" id="frmAssignment">
+        <input name="InstID" id="InstID" value="00617282" type="hidden">
+
+        <h1 class=" text-center">Data</h1>
+
+
+        <!-- -start-Student, class and assignment information. Assignment hard-coded, other values from constants.js file-start -->
+        <div class="row col-lg-12">
+            <div class="col-lg-3">
+                <label class="text-primary" for="FirstName">First Name:</label>
+                <input class="form-control" name="FirstName" id="FirstName" type="text" value="default first name" readonly="readonly">
+            </div>
+            <div class="col-lg-3">
+                <label class="text-primary" for="LastName">Last Name:</label>
+                <input class="form-control" name="LastName" id="LastName" type="text" value="default last name" readonly="readonly">
+            </div>
+            <div class="col-lg-3">
+                <label class="text-primary" for="pin">StarID:</label>
+                <input class="form-control" name="pin" id="pin" type="text" value="default StarID" readonly="readonly">
+            </div>
+            <div class="col-lg-3">
+                <label class="text-primary" for="email">Email:</label>
+                <input class="form-control" name="email" id="email" type="email" value="default email address" readonly="readonly">
+            </div>
+        </div>
+
+        <div class="row col-lg-12">
+            <div class="col-lg-3">
+                <label class="text-primary" for="semester">Semester:</label>
+                <input class="form-control" name="semester" id="semester" type="text" value="default" readonly="readonly">
+            </div>
+            <div class="col-lg-3">
+                <label class="text-primary" for="class">Class:</label>
+                <input class="form-control" name="class" id="class" value="xClass" type="text" readonly="readonly">
+            </div>
+            <div class="col-lg-3">
+                <label class="text-primary" for="section">Section:</label>
+                <input class="form-control" name="section" id="section" value="default" type="text" readonly="readonly">
+            </div>
+            <div class="col-lg-3">
+                <label class="text-primary" for="assignment">Assignment:</label>
+                <input class="form-control" name="assignment" id="assignment" value="Summative05" type="text" readonly="readonly">
+            </div>
+        </div>
+        <!-- -end-Student, class and assignment information-end -->
+
+        <!-- Calculate the correct path for saving the files -->
+        <script>Path = "&#92;OneDrive - MNSCU&#92;" + xClass + "&#92;" + document.getElementById("assignment").value + "&#92;"; </script>
+
+
+        <div class="col-lg-12">
+            <br />
+            <input class="text-danger btn-block btn-lg" name="Submit" value="Submit" type="submit">
+            <br />
+        </div>
+
+        <div class="col-lg-12 h3 text-danger">
+            800 Points
+            <hr />
+        </div>
+
+        <!-- -start-objectives-start -->
+        <div class="col-lg-12"><a href="#Objectives" class="btn btn-info" data-toggle="collapse">Learning Objectives</a></div>
+        <div id="Objectives" class=" collapse in col-lg-12">
+
+            <!--Above this line similar except for Assignment number and title   -->
+
+            <p>These exercises introduce concepts used to define how organizations use data in information systems.</p>
+            <p>After completing this module you will be able to:</p>
+            <ol>
+                <li>Identify and briefly describe the members of the hierarchy of data</li>
+                <li>&nbsp;Identify the advantages of the database approach to data management</li>
+                <li>&nbsp;Identify the key factors that must be considered when designing a database</li>
+                <li>&nbsp;Identify the various types of data models and explain how they are useful in planning a database</li>
+                <li>&nbsp;Describe the relational database model and its fundamental characteristics</li>
+                <li>&nbsp;Define the role of the database schema, data definition language, and data manipulation language</li>
+                <li>&nbsp;Discuss the role of a database administrator and data administrator</li>
+                <li>&nbsp;Identify the common functions performed by all database management systems</li>
+                <li>&nbsp;Define the term big data and identify its basic characteristics</li>
+                <li>&nbsp;Explain why big data represents both a challenge and an opportunity</li>
+                <li>&nbsp;Define the term data management and state its overall goal</li>
+                <li>&nbsp;Define the terms data warehouse, data mart, and data lakes and explain how they are different</li>
+                <li>&nbsp;Outline the extract, transform, load process</li>
+                <li>&nbsp;Explain how a NoSQL database is different from an SQL database</li>
+                <li>&nbsp;Discuss the whole Hadoop computing environment and its various components</li>
+                <li>&nbsp;Define the term in-memory database and explain its advantages in processing big data</li>
+            </ol>
+            <hr />
+        </div>
+
+
+        <div class="col-lg-12"><a href="#Overview" class="btn btn-info" data-toggle="collapse">Assignment Overview</a></div>
+
+        <div id="Overview" class="collapse in  col-lg-12">
+
+
+            <p>
+                The goal of this assignment is to familiarize you with how organizations use 
+                data to get things done.
+                <br />
+                You are expected to develop a working knowledge of the following tasks.<br />
+                If you are having trouble there are several resources available, besides a Google Search<br />
+                You can also ask a teaching assistant or the instructor for assistance.
+            </p>
+            <ol>
+                <li>Data Fundamentals
+            	<ol>
+                    <li>Data Hierarchy</li>
+                    <li>Entitites, Attributes and Keys  </li>
+                    <li>Databases</li>
+                </ol>
+                </li>
+                <li>Data Modeling and Database Characteristics<ol>
+                    <li>Modeling</li>
+                    <li>Relational Database</li>
+                    <li>Data Cleansing</li>
+                </ol>
+                </li>
+                <li>Relational Database Management Systems (Access, SQL Server, MySQL...)
+            	<ol>
+                    <li>SQL Databases</li>
+                    <li>Database Activities</li>
+                    <li>Administration</li>
+                    <li>Some Systems</li>
+                    <li>Using Databases with other Software</li>
+                </ol>
+
+                </li>
+                <li>Big Data<ol>
+                    <li>Characteristics of Big Data</li>
+                    <li>Sources of Big Data</li>
+                    <li>Uses of Big Data</li>
+                    <li>Challenges of Big Data</li>
+                    <li>Data Management</li>
+                </ol>
+                </li>
+                <li>Technologies Used to Process Big Data<ol>
+                    <li>Data Warehouses, Data Marts, Data Lakes</li>
+                    <li>NoSQL Databases</li>
+                    <li>Hadoop</li>
+                    <li>In-Memory Databases</li>
+                </ol>
+                </li>
+            </ol>
+            <hr />
+        </div>
+
+
+        <div class=" col-lg-12"><a href="#Exercise01" class="btn btn-info" data-toggle="collapse">Exercise 1-Data Fundamentals, Modeling and Database Characteristics</a></div>
+
+        <div id="Exercise01" class="collapse in col-lg-12">
+            <p>
+                After reading the first 
+                two sections of chapter 5, you will realize that DATA is vitally important to organizations, and having efficient database systems enables organization personnel to perform required tasks.
+                <br />
+            </p>
+
+            <p>
+                Design a vehicle theft database for a law enforcement agency.<br />
+                This database will provide information about stolen vehicles, and the theft incident.<br />
+                The purpose of the database is to assist law enforcement officers investigating the vehicle theft.
+            </p>
+
+
+
+            <p>
+                Identify five (5) data attributes to capture for each vehicle incident theft.<br />
+                Consider which attribute would uniquely identify each incident.<br />
+                List each data attribute and the required number of bytes required to store that attribute.
+            </p>
+
+            <p>
+                (50) 1.  Attribute 1, number of bytes:<br />
+                <!-- Enter your answer in the VALUE field below   GROK -->
+                <input name="q1" id="q1" size="120" maxlength="120" class="form-control" value="attribute, bytes:" type="text"><br />
+            </p>
+
+            <p>
+                (50) 2.  Attribute 2, number of bytes:<br />
+                <!-- Enter your answer in the VALUE field below   GROK -->
+                <input name="q2" id="q2" size="120" maxlength="120" class="form-control" value="attribute, bytes:" type="text"><br />
+            </p>
+            <p>
+                (50) 3.  Attribute 3, number of bytes:<br />
+                <!-- Enter your answer in the VALUE field below   GROK -->
+                <input name="q3" id="q3" size="120" maxlength="120" class="form-control" value="attribute, bytes:" type="text"><br />
+            </p>
+            <p>
+                (50) 4.  Attribute 4, number of bytes:<br />
+                <!-- Enter your answer in the VALUE field below   GROK -->
+                <input name="q4" id="q4" size="120" maxlength="120" class="form-control" value="attribute, bytes:" type="text"><br />
+            </p>
+            <p>
+                (50) 5.  Attribute 5, number of bytes:<br />
+                <!-- Enter your answer in the VALUE field below   GROK -->
+                <input name="q5" id="q5" size="120" maxlength="120" class="form-control" value="attribute, bytes:" type="text"><br />
+            </p>
+
+
+            <p>
+                (50) 6.   Which attribute would you assign as the primary key for this collection of data?<br />
+
+                <!-- Enter your answer in the VALUE field below   GROK -->
+                <input name="q6" id="q6" size="120" maxlength="120" class="form-control" value="key attribute:" type="text"><br />
+            </p>
+
+
+            <hr />
+
+        </div>
+
+
+
+
+
+        <div class="col-lg-12"><a href="#Exercise02" class="btn btn-info" data-toggle="collapse">Exercise 2-Relational Database Management Systems</a></div>
+        <div id="Exercise02" class="collapse in col-lg-12">
+
+            <p>
+                After reading the third section of chapter 5, Relational Database Management Systems, 
+                download a copy of the Microsoft Access <a href="LandonHotelWizard.accdb" class="bg-info text-white" target="_blank">LandonHotelWizard database</a> to your  ' 
+                  <code><span id="bPath"></span></code>
+                <script>document.getElementById("bPath").innerHTML = Path </script>
+                ' folder.<br />
+                Open the file.<br />
+                There will be a Security Warning message, to clear it you will need to click the &#39;Enable Content&#39; button.<br />
+                Examine the file.<br />
+                Although Access is a part of the Office Personal Productivity Suite, it is unique in the ability to work in multi-user environments.
+            </p>
+            <p>
+                Log into your LinkedIn Learning account and refer to Chapter 5 of the course Access Essential Training (Office 365).<br />
+                Use Access to create the select query &#39;<a href="https://www.linkedin.com/learning/access-essential-training-office-365/build-queries-in-design-view" class="bg-info text-white" target="_blank">qryCheckInDetails</a>&#39;&nbsp; as shown in the video.<br />
+
+
+                The select query will have the following properties:<br />
+                Guests table fields:
+            </p>
+            <ul>
+                <li>FirstName</li>
+                <li>LastName</li>
+                <li>Phone</li>
+            </ul>
+            RoomAssignments table fields:<br />
+
+            <ul>
+                <li>CheckInDate- sorted Descending</li>
+                <li>RoomID</li>
+                <li>DayOfWeek</li>
+
+            </ul>
+
+
+            <p>
+                (50) 7. What field allows the information in the 
+                &#39;Guests&#39; table to be joined to the information in the &#39;RoomAssignments&#39; table?            
+           <br />
+
+                <!-- Enter your answer in the VALUE field below   GROK -->
+                <input name="q7" id="q7" size="120" maxlength="120" class="form-control" value="related field:" type="text">
+            </p>
+            <hr />
+            <p>
+                (50) 8. Use the Snipping Tool and make a screen shot of 
+                the qryCheckInDetails in &#39;Design View&#39;.<br />
+                Make sure to show the table data sources, the query by example grid with settings, and the Access title bar. 
+                <br />
+
+                <!--  PgP 2/4/2018 create path using constants and current document assignment -->
+                Save the screen shot  as &quot;Ex2&quot; in your ' 
+                  <code><span id="cPath"></span></code>
+                <script>document.getElementById("cPath").innerHTML = Path </script>
+                ' folder.<br />
+
+                You will be combining screen shots from several exercises at the end of this assignment, just as you did in 
+                  <a href="https://eprofessor.azurewebsites.net/Formative00/Formative00.html#PDFfileCreation" class="bg-info text-white" target="_blank">Formative00</a>-PDF File Creation. 
+            </p>
+
+        </div>
+
+        <div class="col-lg-12 text-danger">
+            <h2>Screen Shot Ex2</h2>
+            <hr />
+        </div>
+
+
+        <div class="col-lg-12"><a href="#Exercise03" class="btn btn-info" data-toggle="collapse">Exercise 3-Big Data</a></div>
+
+        <div id="Exercise03" class="collapse in col-lg-12">
+
+            <p>
+                After reading the fourth section of chapter 
+                5, Big Data, use the NYT, WSJ, Flipster, or the internet to find recent information about the purchase of almost 2,000 Rite Aid stores by Walgreens.<br />
+            </p>
+            <p>
+                Did or should Walgreens appoint a data governance team to oversee the assimilation of the Rite Aid data into their system?.<br />
+                Consider the costs in time and money in such an effort.<br />
+                Also reflect on what could possibly go wrong if this effort fails, and erroneous data is transferred from Rite Aid to Walgreens.<br />
+                Reflect on these issues, and what you have read in the chapter.<br />
+            </p>
+
+            <p>
+                (50) 9.  Briefly summarize what you belive to be the top three issues for the people responsible for the Walgreens/Rite Aid data assimilation process.<br />
+
+                <!-- Enter your answer in the VALUE field below   GROK -->
+                <input name="q9" id="q9" size="120" maxlength="120" class="form-control" value="top three issues:" type="text">
+            </p>
+            <hr />
+
+
+            <p>
+                (50) 10. Use the Snipping Tool to make a screen of an article used in your research.<br />
+
+                <!--  PgP 2/4/2018 create path using constants and current document assignment -->
+                Save the screen shot  as &quot;Ex3&quot; in your ' 
+                  <code><span id="aPath"></span></code>
+                <script>document.getElementById("aPath").innerHTML = Path </script>
+                ' folder.<br />
+
+                You will be combining screen shots from several exercises at the end of this assignment, just as you did in 
+                  <a href="https://eprofessor.azurewebsites.net/Formative00/Formative00.html#PDFfileCreation" class="bg-info text-white" target="_blank">Formative00</a>-PDF File Creation. 
+            </p>
+
+
+            <div class="col-lg-12 text-danger">
+                <h2>Screen Shot Ex3</h2>
+                <hr />
+            </div>
+
+        </div>
+
+
+
+        <div class="col-lg-12"><a href="#Exercise04" class="btn btn-info" data-toggle="collapse">Exercise 4-Technologies Used to Process Big Data</a></div>
+
+        <div id="Exercise04" class="collapse in col-lg-12">
+
+            <p>
+                After reading the fifth section of chapter 5, Technologies Used to Process Big Data, consider the discussion focused on telecommunications firms such as Telefonica Brasil and Verizon performing churn analysis.
+                <br />
+            </p>
+            <p>
+                Churn analysis is very important because preventing the loss of a customer can greatly impact company finances.<br />
+                Reflect on this issue, and what you have read in the chapter.<br />
+            </p>
+
+            <p>
+                (50) 11.  Briefly summarize why Telefonica Brasil and Verizon would use big data techniques instead of traditional relational databases to perform churn analysis.<br />
+
+                <!-- Enter your answer in the VALUE field below   GROK -->
+                <input name="q11" id="q11" size="120" maxlength="120" class="form-control" value="why big data:" type="text">
+            </p>
+
+            <hr />
+
+        </div>
+
+
+
+
+        <!--  From here to end difference question numbers and Summative numbering for PDF of file uploaded to D2L    -->
+
+
+        <div class="col-lg-12"><a href="#ExercisePDF" class="btn btn-info" data-toggle="collapse">Exercise-PDF File Creation</a></div>
+
+        <div id="ExercisePDF" class="collapse in  col-lg-12">
+            <p>
+                Use a web browser to verify that you have published your website to https://classes.winona.edu/...
+                <br />
+                Check that your name, StarID, email, class, semester, section and all of your answers are correct and visible.
+                <br />
+                From the menu choose File&gt;Print... and using &quot;Microsoft Print to PDF&quot; save a copy of this assignment as a .pdf file in your   ' 
+                  <code><span id="dPath"></span></code>
+                <script>document.getElementById("dPath").innerHTML = Path; </script>
+                ' folder.<br />
+            </p>
+            <br />
+
+            <p>
+                (50) 12. Save your file 'WebPage.pdf' to the ' 
+                  <code><span id="ePath"></span></code>
+                <script>document.getElementById("ePath").innerHTML = Path; </script>
+                ' folder.<br />
+
+
+            </p>
+
+            <div class="text-danger">
+                <h2>WebPage.pdf</h2>
+                <hr />
+            </div>
+
+            <p>Create one .pdf (portable document format) file from the screen shots that you have taken by following these steps.</p>
+
+            <ol>
+                <li>Open File Explorer, make sure the screen shot files are properly named(Ex1, Ex2 , Ex3.. ) &nbsp; </li>
+                <li>Select all of the screen shots to be combined. </li>
+                <li>Right Click and select &#39;Print&#39; from the short-cut menu.      </li>
+                <li>In the bottom center of the &#39;Print Pictures&#39; dialog box uncheck the box &quot;Fit picture to frame&quot;</li>
+                <li>Click on &#39;Print&#39; and save the file with the name&nbsp; &quot;ScreenShots.pdf&quot; in your '
+              <code><span id="fPath"></span></code>
+                    <script>document.getElementById("fPath").innerHTML = Path; </script>
+                    ' folder.<br />
+                </li>
+            </ol>
+
+
+            <p>
+                (50) 13. Save your file 'ScreenShots.pdf' to the ' 
+                  <code><span id="gPath"></span></code>
+                <script>document.getElementById("gPath").innerHTML = Path; </script>
+                ' folder.<br />
+
+            </p>
+
+            <div class="text-danger">
+                <h2>ScreenShots.pdf</h2>
+                <hr />
+            </div>
+
+
+            <p>
+                Use PDFill to merge the <strong>WebPage.pdf</strong> file with the <strong>ScreenShots.pdf </strong>file, and save it as &#39;<strong>Summative05.pdf</strong>&#39; in ' 
+                  <code><span id="hPath"></span></code>
+                <script>document.getElementById("hPath").innerHTML = Path; </script>
+                ' folder.<br />
+
+            </p>
+
+
+            <p>(50) 14. Upload your file 'Summative05.pdf' to the D2L 'Summative05' Assignment folder.</p>
+
+            <div class="text-danger">
+                <h2>Summative05.pdf</h2>
+            </div>
+            <hr />
+
+        </div>
+
+
+
+
+        <div class="col-lg-12"><a href="#ExerciseAssignmentSubmission" class="btn btn-info" data-toggle="collapse">Exercise-Assignment Submission</a></div>
+
+        <div id="ExerciseAssignmentSubmission" class="collapse in  col-lg-12">
+            <p>
+                Use a browser to view your completed and published website at: https://classes.winona.edu/...     
+                <br />
+                Ensure that you have linked this assignment on your home page.
+                Note that your screen shots do not have to be completed to perform this step.<br>
+            </p>
+
+            (50) 15. Home Page Hyperlink<br />
+            Check and verify that this assignment is hyperlinked on your home page.<br />
+            <br />
+
+            (50) 16. Assignment submission<br />
+            Press the Submit button at the top or bottom of this page.
+                Read and follow instructions on the confirmation page.&nbsp; Correct any errors.
+        </div>
+        <hr />
+
+
+
+        <div class="col-lg-12">
+            <br />
+            <input class="text-danger btn-block btn-lg" name="Submit" value="Submit" type="submit">
+            <br />
+        </div>
+
+
+    </form>
+
+
+
+    <!-- Creative Commons License Info -->
+    <div id="xLicense" class=" col-lg-12 text-muted"></div>
+
+    <div id="xfooter" class=" col-lg-12 text-muted"></div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="../../ReadOnly/jquery-1.js"></script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../../ReadOnly/bootstrap.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="en">
+
+<!-- 2/22/2019 PgP this is the new model assignment, containing split constants files, new One-Drive Path, new location for support files -->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap -->
+    <link href="../../ReadOnly/bootstrap.css" rel="stylesheet">
+
+    <!-- constant file to update email, firstname, lastname, starid, section on students' pages -->
+    <script src="../constants.js"></script>
+    <script src="../../ReadOnly/CourseConstants.js"></script>
+
+    <!-- model assignment file, version 1 released 2018/02/18 PgP -->
+
+    <title>MIS362 Summative02</title>
+</head>
+
+<body class="container-fluid" onload="setVariables()">
+
+    <form class="container-fluid" action="https://eprofessor.azurewebsites.net/code/ProcessFormData.asp" method="post" name="frmAssignment" id="frmAssignment">
+        <input name="InstID" id="InstID" value="00617282" type="hidden">
+
+        <h1 class=" text-center">Organizations and Information Systems</h1>
+
+        <!-- -start-Student, class and assignment information. Assignment hard-coded, other values from constants.js file-start -->
+        <div class="row col-lg-12">
+            <div class="col-lg-3">
+                <label class="text-primary" for="FirstName">First Name:</label>
+                <input class="form-control" name="FirstName" id="FirstName" type="text" value="default first name" readonly="readonly">
+            </div>
+            <div class="col-lg-3">
+                <label class="text-primary" for="LastName">Last Name:</label>
+                <input class="form-control" name="LastName" id="LastName" type="text" value="default last name" readonly="readonly">
+            </div>
+            <div class="col-lg-3">
+                <label class="text-primary" for="pin">StarID:</label>
+                <input class="form-control" name="pin" id="pin" type="text" value="default StarID" readonly="readonly">
+            </div>
+            <div class="col-lg-3">
+                <label class="text-primary" for="email">Email:</label>
+                <input class="form-control" name="email" id="email" type="email" value="default email address" readonly="readonly">
+            </div>
+        </div>
+
+        <div class="row col-lg-12">
+            <div class="col-lg-3">
+                <label class="text-primary" for="semester">Semester:</label>
+                <input class="form-control" name="semester" id="semester" type="text" value="default" readonly="readonly">
+            </div>
+            <div class="col-lg-3">
+                <label class="text-primary" for="class">Class:</label>
+                <input class="form-control" name="class" id="class" value="xClass" type="text" readonly="readonly">
+            </div>
+            <div class="col-lg-3">
+                <label class="text-primary" for="section">Section:</label>
+                <input class="form-control" name="section" id="section" value="default" type="text" readonly="readonly">
+            </div>
+            <div class="col-lg-3">
+                <label class="text-primary" for="assignment">Assignment:</label>
+                <input class="form-control" name="assignment" id="assignment" value="Summative02" type="text" readonly="readonly">
+            </div>
+        </div>
+        <!-- -end-Student, class and assignment information-end -->
+
+        <!-- Calculate the correct path for saving the files -->
+        <script>Path = "&#92;OneDrive - MNSCU&#92;" + xClass + "&#92;" + document.getElementById("assignment").value + "&#92;"; </script>
+
+
+        <div class="col-lg-12">
+            <br />
+            <input class="text-danger btn-block btn-lg" name="Submit" value="Submit" type="submit">
+            <br />
+        </div>
+
+        <div class="col-lg-12 h3 text-danger">
+            600 Points
+            <hr />
+        </div>
+
+        <!-- -start-objectives-start -->
+        <div class="col-lg-12"><a href="#Objectives" class="btn btn-info" data-toggle="collapse">Learning Objectives</a></div>
+        <div id="Objectives" class=" collapse in col-lg-12">
+
+            <!--Above this line similar except for Assignment number and title   -->
+
+            <p>These exercises introduce structures and management concepts used to define how organizations use information systems.</p>
+            <p>After completing this module you will be able to:</p>
+            <ol>
+                <li>&nbsp;Describe change models that increases the likelihood of successfully introducing a new information system in an organization (CLO 2).</li>
+                <li>&nbsp;Explain reengineering and continuous improvement (CLO 2).
+                </li>
+                <li>Show how information systems support and work within the automated portions of an organizational process (CLO 1).
+                </li>
+                <li>Define the types of roles, functions, and careers available in the field of information systems (CLO 1).
+                </li>
+                <li>Explain value chain with examples (CLO 1).
+                </li>
+                <li>&nbsp;Discuss pros and cons of outsourcing, offshoring, and downsizing (CLO 2)
+                </li>
+                <li>&nbsp;Explain two types of innovations (CLO 1).
+                </li>
+                <li>&nbsp;Explain how soft-side implementation is a critical factor in the successful adoption of any major change (CLO 2).</li>
+                <li>&nbsp;Create a database and tables in Access 2016 (CLO 11).</li>
+            </ol>
+            <hr />
+        </div>
+
+
+        <div class="col-lg-12"><a href="#Overview" class="btn btn-info" data-toggle="collapse">Assignment Overview</a></div>
+
+        <div id="Overview" class="collapse in  col-lg-12">
+
+
+            <p>
+                The goal of this assignment is to familiarize you with how organizations use information systems to make decisions and get things done.
+                <br />
+                You are expected to develop a working knowledge of the following tasks.<br />
+                If you are having trouble there are several resources available, besides a Google Search<br />
+                You can also ask a teaching assistant or ask the instructor for assistance.
+            </p>
+            <ol>
+                <li>Dealing with change
+            	<ol>
+                    <li>Innovation and reengineering.</li>
+                    <li>Continuous improvement  </li>
+                    <li>Outsourcing and offshoring</li>
+                    <li>Downsizing</li>
+                </ol>
+                </li>
+                <li>Organizational culture<ol>
+                    <li>Models and analysis</li>
+                    <li>User satisfaction</li>
+                    <li>Diffusion of innovation</li>
+                </ol>
+                </li>
+                <li>Information Systems careers
+            	<ol>
+                    <li>IS careers, short term</li>
+                    <li>IS careers, long term</li>
+                </ol>
+
+                </li>
+            </ol>
+            <hr />
+
+        </div>
+
+        <div class=" col-lg-12"><a href="#Exercise01" class="btn btn-info" data-toggle="collapse">Exercise 1-Change</a></div>
+
+        <div id="Exercise01" class="collapse in col-lg-12">
+            <p>
+                After reading the first two sections of chapter 2, you will note that organizations have several choices on how to accomplish the tasks at hand.
+                <br />
+            </p>
+
+            <p>Organizations must change or become obsolete.&nbsp; Choose from innovation, reengineering, continuous improvement, outsourcing, offshoring and downsizing-and use the NYT, WSJ or a magazine available from Flipster (remember Formative00?) to read and summarize an article discussing how an organization used one of these to accomplish change. </p>
+            <p>
+                Company investigated.<br />
+                (50) 1.   List the company you researched below.<br />
+
+
+                <!-- Enter your answer in the VALUE field below   GROK -->
+                <input name="q1" id="q1" size="120" maxlength="120" class="form-control" value="Enter your answer here" type="text">
+            </p>
+            <p>
+                (50) 2. Below enter the technique used to address the problem, and briefly summarized how it was accomplished. (It is okay if the project was a failure-if so, consider what was learned).<br />
+
+
+                <!-- Enter your answer in the VALUE field below   GROK -->
+                <input name="q2" id="q2" size="120" maxlength="120" class="form-control" value="Enter your answer here" type="text">
+            </p>
+
+            <p>
+                (50) 3. Below enter the 
+                url of the article used as your source, from NYT, WSJ or the magazine.
+           <br />
+
+                <!-- Enter your answer in the VALUE field below   GROK -->
+                <input name="q3" id="q3" size="120" maxlength="120" class="form-control" value="Enter your answer here" type="text">
+            </p>
+            <hr />
+        </div>
+
+
+
+
+        <div class="col-lg-12"><a href="#Exercise02" class="btn btn-info" data-toggle="collapse">Exercise 2-Organizational Culture</a></div>
+        <div id="Exercise02" class="collapse in col-lg-12">
+
+            <p>
+                After reading the third section of chapter 2, Organizational Change and Culture, use the NYT, WSJ, Flipster, or the internet to find an organization that you admire because they are dealing with rapidly changing technology.&nbsp; Examples are Google, Apple, Facebook, General Electric, Tesla.
+            </p>
+            <p>
+                Find out about their organizational structure.
+            </p>
+
+            <p>
+                (50) 4. Use the Snipping Tool to make a screen of 
+                their organizational structure (from your research materials).&nbsp; The screen shot can be taken from any newspaper, magazine or internet article from your research. 
+                <br />
+
+                <!--  PgP 2/4/2018 create path using constants and current document assignment -->
+                Save the screen shot  as &quot;Ex2&quot; in your ' 
+                  <code><span id="aPath"></span></code>
+                <script>document.getElementById("aPath").innerHTML = Path </script>
+                ' folder.<br />
+
+                You will be combining screen shots from several exercises at the end of this assignment, just as you did in 
+                  <a href="https://eprofessor.azurewebsites.net/Formative00/Formative00.html#PDFfileCreation" class="bg-info text-white" target="_blank">Formative00</a>-PDF File Creation. 
+            </p>
+
+        </div>
+
+        <div class="col-lg-12 text-danger">
+            <h2>Screen Shot Ex2</h2>
+            <hr />
+        </div>
+
+
+        <div class="col-lg-12"><a href="#Exercise03" class="btn btn-info" data-toggle="collapse">Exercise 3-Information Systems Careers</a></div>
+
+        <div id="Exercise03" class="collapse in col-lg-12">
+
+            <p>
+                After reading the 
+                fourth section of chapter 2, Careers in Information Systems, use the NYT, WSJ, Flipster, or the internet to find a career that you would like to pursue.&nbsp; Consider how this career makes use of Information Systems and Information Technology.
+            </p>
+            <p>
+                Find a posting for a position that you would like to apply for.<br />
+                Hint: look for the &#39;Careers&#39; section on a website of an organization of interest.<br />
+                (50) 5.  Enter the name of the organization and the position below.
+            </p>
+
+            <!-- Enter your answer in the VALUE field below   GROK -->
+            <input name="q5" id="q5" size="120" maxlength="120" class="form-control" value="Enter your answer here" type="text">
+            <br />
+
+            <p>
+                Reflect on this posting, and note whether it requires Information Systems, Information Technology or Computer Proficiency skills.
+                <br />
+                (50) 6.  Briefly summarize the technical skills required by this position.<br />
+
+                <!-- Enter your answer in the VALUE field below   GROK -->
+                <input name="q6" id="q6" size="120" maxlength="120" class="form-control" value="Enter your answer here" type="text">
+            </p>
+            <hr />
+
+
+            <p>
+                (50) 7. Take a screen shot of the position of interest to you.
+                <br />
+                Use the Snipping Tool to make a screen shot that includes the position description and the organizaton name.<br />
+
+                <!--  PgP 2/4/2018 create path using constants and current document assignment -->
+                Save the screen shot  as &quot;Ex3&quot; in your ' 
+                  <code><span id="bPath"></span></code>
+                <script>document.getElementById("bPath").innerHTML = Path </script>
+                ' folder.<br />
+
+                You will be combining screen shots from several exercises at the end of this assignment, just as you did in 
+                  <a href="https://eprofessor.azurewebsites.net/Formative00/Formative00.html#PDFfileCreation" class="bg-info text-white" target="_blank">Formative00</a>-PDF File Creation. 
+            </p>
+
+        </div>
+
+        <div class="col-lg-12 text-danger">
+            <h2>Screen Shot Ex3</h2>
+            <hr />
+        </div>
+
+        <!--  From here to end difference question numbers and Summative numbering for PDF of file uploaded to D2L    -->
+
+
+        <div class="col-lg-12"><a href="#ExercisePDF" class="btn btn-info" data-toggle="collapse">Exercise-PDF File Creation</a></div>
+
+        <div id="ExercisePDF" class="collapse in  col-lg-12">
+            <p>
+                Use a web browser to verify that you have published your website to https://classes.winona.edu/...
+                <br />
+                Check that your name, StarID, email, class, semester, section and all of your answers are correct and visible.
+                <br />
+                From the menu choose File&gt;Print... and using &quot;Microsoft Print to PDF&quot; save a copy of this assignment as a .pdf file in your   ' 
+                  <code><span id="dPath"></span></code>
+                <script>document.getElementById("dPath").innerHTML = Path; </script>
+                ' folder.<br />
+            </p>
+            <br />
+
+            <p>
+                (50) 8. Save your file 'WebPage.pdf' to the ' 
+                  <code><span id="ePath"></span></code>
+                <script>document.getElementById("ePath").innerHTML = Path; </script>
+                ' folder.<br />
+
+
+            </p>
+
+            <div class="text-danger">
+                <h2>WebPage.pdf</h2>
+                <hr />
+            </div>
+
+            <p>Create one .pdf (portable document format) file from the screen shots that you have taken by following these steps.</p>
+
+            <ol>
+                <li>Open File Explorer, make sure the screen shot files are properly named(Ex1, Ex2 , Ex3.. ) &nbsp; </li>
+                <li>Select all of the screen shots to be combined. </li>
+                <li>Right Click and select &#39;Print&#39; from the short-cut menu.      </li>
+                <li>In the bottom center of the &#39;Print Pictures&#39; dialog box uncheck the box &quot;Fit picture to frame&quot;</li>
+                <li>Click on &#39;Print&#39; and save the file with the name&nbsp; &quot;ScreenShots.pdf&quot; in your '
+              <code><span id="fPath"></span></code>
+                    <script>document.getElementById("fPath").innerHTML = Path; </script>
+                    ' folder.<br />
+                </li>
+            </ol>
+
+
+            <p>
+                (50) 9. Save your file 'ScreenShots.pdf' to the ' 
+                  <code><span id="gPath"></span></code>
+                <script>document.getElementById("gPath").innerHTML = Path; </script>
+                ' folder.<br />
+
+            </p>
+
+            <div class="text-danger">
+                <h2>ScreenShots.pdf</h2>
+                <hr />
+            </div>
+
+
+            <p>
+                Use PDFill to merge the <strong>WebPage.pdf</strong> file with the <strong>ScreenShots.pdf </strong>file, and save it as &#39;<strong>Summative02.pdf</strong>&#39; in ' 
+                  <code><span id="hPath"></span></code>
+                <script>document.getElementById("hPath").innerHTML = Path; </script>
+                ' folder.<br />
+
+            </p>
+
+
+            <p>(50) 10. Upload your file 'Summative02.pdf' to the D2L 'Summative02' Assignment folder.</p>
+
+            <div class="text-danger">
+                <h2>Summative02.pdf</h2>
+            </div>
+            <hr />
+
+        </div>
+
+
+
+
+        <div class="col-lg-12"><a href="#ExerciseAssignmentSubmission" class="btn btn-info" data-toggle="collapse">Exercise-Assignment Submission</a></div>
+
+        <div id="ExerciseAssignmentSubmission" class="collapse in  col-lg-12">
+            <p>
+                Use a browser to view your completed and published website at: https://classes.winona.edu/...     
+                <br />
+                Ensure that you have linked this assignment on your home page.
+                Note that your screen shots do not have to be completed to perform this step.<br>
+            </p>
+
+            (50) 11. Home Page Hyperlink<br />
+            Check and verify that this assignment is hyperlinked on your home page.<br />
+            <br />
+
+            (50) 12. Assignment submission<br />
+            Press the Submit button at the top or bottom of this page.
+                Read and follow instructions on the confirmation page.&nbsp; Correct any errors.
+        </div>
+        <hr />
+
+
+
+        <div class="col-lg-12">
+            <br />
+            <input class="text-danger btn-block btn-lg" name="Submit" value="Submit" type="submit">
+            <br />
+        </div>
+
+
+    </form>
+
+
+
+    <!-- Creative Commons License Info -->
+    <div id="xLicense" class=" col-lg-12 text-muted"></div>
+
+    <div id="xfooter" class=" col-lg-12 text-muted"></div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="../../ReadOnly/jquery-1.js"></script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../../ReadOnly/bootstrap.js"></script>
+
+</body>
+</html>

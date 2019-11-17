@@ -1,0 +1,442 @@
+<!doctype html>
+<html lang="en">
+
+<!-- 2/22/2019 PgP this is the new model assignment, containing split constants files, new One-Drive Path, new location for support files -->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap -->
+    <link href="../../ReadOnly/bootstrap.css" rel="stylesheet">
+
+    <!-- constant file to update email, firstname, lastname, starid, section on students' pages -->
+    <script src="../constants.js"></script>
+    <script src="../../ReadOnly/CourseConstants.js"></script>
+
+    <!-- model assignment file, version 1 released 2018/02/18 PgP -->
+
+    <title>MIS362 Summative04</title>
+</head>
+
+<body class="container-fluid" onload="setVariables()">
+
+    <form class="container-fluid" action="https://eprofessor.azurewebsites.net/code/ProcessFormData.asp" method="post" name="frmAssignment" id="frmAssignment">
+        <input name="InstID" id="InstID" value="00617282" type="hidden">
+
+        <h1 class=" text-center">Software</h1>
+
+
+        <!-- -start-Student, class and assignment information. Assignment hard-coded, other values from constants.js file-start -->
+        <div class="row col-lg-12">
+            <div class="col-lg-3">
+                <label class="text-primary" for="FirstName">First Name:</label>
+                <input class="form-control" name="FirstName" id="FirstName" type="text" value="default first name" readonly="readonly">
+            </div>
+            <div class="col-lg-3">
+                <label class="text-primary" for="LastName">Last Name:</label>
+                <input class="form-control" name="LastName" id="LastName" type="text" value="default last name" readonly="readonly">
+            </div>
+            <div class="col-lg-3">
+                <label class="text-primary" for="pin">StarID:</label>
+                <input class="form-control" name="pin" id="pin" type="text" value="default StarID" readonly="readonly">
+            </div>
+            <div class="col-lg-3">
+                <label class="text-primary" for="email">Email:</label>
+                <input class="form-control" name="email" id="email" type="email" value="default email address" readonly="readonly">
+            </div>
+        </div>
+
+        <div class="row col-lg-12">
+            <div class="col-lg-3">
+                <label class="text-primary" for="semester">Semester:</label>
+                <input class="form-control" name="semester" id="semester" type="text" value="default" readonly="readonly">
+            </div>
+            <div class="col-lg-3">
+                <label class="text-primary" for="class">Class:</label>
+                <input class="form-control" name="class" id="class" value="xClass" type="text" readonly="readonly">
+            </div>
+            <div class="col-lg-3">
+                <label class="text-primary" for="section">Section:</label>
+                <input class="form-control" name="section" id="section" value="default" type="text" readonly="readonly">
+            </div>
+            <div class="col-lg-3">
+                <label class="text-primary" for="assignment">Assignment:</label>
+                <input class="form-control" name="assignment" id="assignment" value="Summative04" type="text" readonly="readonly">
+            </div>
+        </div>
+        <!-- -end-Student, class and assignment information-end -->
+
+        <!-- Calculate the correct path for saving the files -->
+        <script>Path = "&#92;OneDrive - MNSCU&#92;" + xClass + "&#92;" + document.getElementById("assignment").value + "&#92;"; </script>
+
+
+        <div class="col-lg-12">
+            <br />
+            <input class="text-danger btn-block btn-lg" name="Submit" value="Submit" type="submit">
+            <br />
+        </div>
+
+        <div class="col-lg-12 h3 text-danger">
+            700 Points
+            <hr />
+        </div>
+
+        <!-- -start-objectives-start -->
+        <div class="col-lg-12"><a href="#Objectives" class="btn btn-info" data-toggle="collapse">Learning Objectives</a></div>
+        <div id="Objectives" class=" collapse in col-lg-12">
+
+            <!--Above this line similar except for Assignment number and title   -->
+
+            <p>These exercises explore how software is a key component use by organization information systems.</p>
+            <p>After completing this module you will be able to:</p>
+            <ol>
+                <li>&nbsp;Identify and briefly describe the functions of two basic kinds of software.</li>
+                <li>&nbsp;Define the term &#39;sphere of influence&#39;, and describe how it can be used to classify software</li>
+                <li>&nbsp;Define the basic functions performed by the operating system</li>
+                <li>&nbsp;Identify current operating systems that are used for personal, workgroup, and enterprise computing </li>
+                <li>&nbsp;Discuss the role of the operating system in embedded systems</li>
+                <li>&nbsp;Discuss how application software can support personal, workgroup, and enterprise business objectives</li>
+                <li>&nbsp;Identify three basic approaches to developing application software and discuss the pros and cons of each</li>
+                <li>&nbsp;Identify programming languages commonly in use today</li>
+                <li>&nbsp;Identify several key software issues and trends that have an impact on organizations and individuals.</li>
+            </ol>
+            <hr />
+        </div>
+
+
+        <div class="col-lg-12"><a href="#Overview" class="btn btn-info" data-toggle="collapse">Assignment Overview</a></div>
+
+        <div id="Overview" class="collapse in  col-lg-12">
+
+
+            <p>
+                The goal of this assignment is to familiarize you with how organizations use 
+                the latest available software to automate tasks in order to efficiently and effectively get things done.
+                <br />
+                You are expected to develop a working knowledge of the following tasks.<br />
+                If you are having trouble there are several resources available, besides a Google Search<br />
+                You can also ask a teaching assistant or the instructor for assistance.
+            </p>
+            <ol>
+                <li>Systems Software
+            	<ol>
+                    <li>Operating Systems</li>
+                    <li>Utility Programs  </li>
+                    <li>Middleware</li>
+                </ol>
+                </li>
+                <li>Application Software<ol>
+                    <li>Personal</li>
+                    <li>Workgroup</li>
+                    <li>Enterprise</li>
+                </ol>
+                </li>
+                <li>Issues and Trends
+            	<ol>
+                    <li>Bugs</li>
+                    <li>Intellectual Property</li>
+                    <li>Free and Open-Source Software</li>
+                    <li>Upgrades</li>
+                    <li>Global Support</li>
+                </ol>
+
+                </li>
+            </ol>
+            <hr />
+        </div>
+
+
+        <div class=" col-lg-12"><a href="#Exercise01" class="btn btn-info" data-toggle="collapse">Exercise 1-Systems Software</a></div>
+
+        <div id="Exercise01" class="collapse in col-lg-12">
+            <p>
+                After reading the first 
+                two sections of chapter 4, you will realize that operating systems, utility and middleware software is essential&nbsp; to enable the organization hardware to perform required tasks.
+                <br />
+            </p>
+
+            <p>
+                Organizations need to ensure that hardware and software is performing optimally.<br />
+                Download the <a href="https://docs.microsoft.com/en-us/sysinternals/downloads/sysinternals-suite" class="bg-info text-white" target="_blank">Microsoft Sysinternals Suite</a> discussed in Chapter 4, section 2.<br />
+
+                Extract the files, then in File Explorer find and double-click the file &quot;Autoruns64.exe&quot;.<br />
+                Select the &#39;Services&#39; tab and investigate some of the services that are running on the computer.
+                <br />
+                Choose any service of interest to you, right-click and select &quot;Process Explorer...&quot;.
+                <br />
+                Note: do not make any changes or stop any services or processes-doing so could have unexpected results!<br />
+            </p>
+            <p>If you want to be real geeky, investigate using <code><a href="BGInfo.pdf" target="_blank">Bginfo64.exe</a></code> to display system data as the computer desktop background! </p>
+
+
+
+            <p>
+                After examining the Process Explorer, answer the questions below.<br />
+                (50) 1.   
+                How many different processes are running on the computer?&nbsp; Look in the status bar at the bottom.<br />
+
+                <!-- Enter your answer in the VALUE field below   GROK -->
+                <input name="q1" id="q1" size="120" maxlength="120" class="form-control" value="Enter your answer here" type="text"><br />
+            </p>
+            <p>
+                (50) 2.   Which 
+                process is using the most &#39;Bytes&#39; of memory? Click the column heading &#39;Working Set&#39; to change the sort order.<br />
+
+                <!-- Enter your answer in the VALUE field below   GROK -->
+                <input name="q2" id="q2" size="120" maxlength="120" class="form-control" value="Enter your answer here" type="text"><br />
+            </p>
+
+
+
+            <p>
+                (50) 3. Make sure a browser is open.&nbsp; Why are there multiple entries for the brower in the Process Explorer list? (discuss with class members).<br />
+
+                <!-- Enter your answer in the VALUE field below   GROK -->
+                <input name="q3" id="q3" size="120" maxlength="120" class="form-control" value="Enter your answer here" type="text"><br />
+            </p>
+
+            <p>
+                Consider 
+                what Process Explorer is doing.<br />
+                What can be done with the information available from Process Explorer about software applicatons?<br />
+                (50) 4. Briefly list 
+                a way organizations can use Process Explorer to investigate computer systems software usage. Consider changing technology, typical operations and accomplishing work.            
+           <br />
+
+                <!-- Enter your answer in the VALUE field below   GROK -->
+                <input name="q4" id="q4" size="120" maxlength="120" class="form-control" value="Enter your answer here" type="text">
+            </p>
+            <hr />
+
+            <p>
+                (50) 5. Use the Snipping Tool to make a screen of your <a href="ProcessExplorer.PNG" class="bg-info text-white" target="_blank">Process Explorer results</a>.               
+                <br />
+
+                <!--  PgP 2/4/2018 create path using constants and current document assignment -->
+                Save the screen shot  as &quot;Ex1&quot; in your ' 
+                  <code><span id="aPath"></span></code>
+                <script>document.getElementById("aPath").innerHTML = Path </script>
+                ' folder.<br />
+
+                You will be combining screen shots from several exercises at the end of this assignment, just as you did in 
+                  <a href="https://eprofessor.azurewebsites.net/Formative00/Formative00.html#PDFfileCreation" class="bg-info text-white" target="_blank">Formative00</a>-PDF File Creation. 
+            </p>
+
+        </div>
+
+        <div class="col-lg-12 text-danger">
+            <h2>Screen Shot Ex1</h2>
+            <hr />
+        </div>
+
+
+
+
+
+
+        <div class="col-lg-12"><a href="#Exercise02" class="btn btn-info" data-toggle="collapse">Exercise 2-Application Software</a></div>
+        <div id="Exercise02" class="collapse in col-lg-12">
+
+            <p>
+                After reading the third section of chapter 4, Applicaton Software, login to Microsoft LinkedIn Learning. <br />
+                Use the search function to find the <a href="https://www.linkedin.com/learning/paths/become-a-python-developer" class="bg-info text-white" target="_blank">learning path for becoming a <code>Python</code> developer</a>.<br />
+                
+            </p>
+            <p>
+                Review the information presented in a few of these courses regarding the uses of this programming language.
+            </p>
+            <p>
+                (50) 6. What 
+                do you consider the most interesting use of Python?            
+           <br />
+
+                <!-- Enter your answer in the VALUE field below   GROK -->
+                <input name="q6" id="q6" size="120" maxlength="120" class="form-control" value="Enter your answer here" type="text">
+            </p>
+            <hr />
+            <p>
+                (50) 7. Use the Snipping Tool and make a screen of 
+                the Learning Path course list. 
+                <br />
+
+                <!--  PgP 2/4/2018 create path using constants and current document assignment -->
+                Save the screen shot  as &quot;Ex2&quot; in your ' 
+                  <code><span id="bPath"></span></code>
+                <script>document.getElementById("bPath").innerHTML = Path </script>
+                ' folder.<br />
+
+                You will be combining screen shots from several exercises at the end of this assignment, just as you did in 
+                  <a href="https://eprofessor.azurewebsites.net/Formative00/Formative00.html#PDFfileCreation" class="bg-info text-white" target="_blank">Formative00</a>-PDF File Creation. 
+            </p>
+
+        </div>
+
+        <div class="col-lg-12 text-danger">
+            <h2>Screen Shot Ex2</h2>
+            <hr />
+        </div>
+
+
+        <div class="col-lg-12"><a href="#Exercise03" class="btn btn-info" data-toggle="collapse">Exercise 3-Issues and Trends</a></div>
+
+        <div id="Exercise03" class="collapse in col-lg-12">
+
+            <p>
+                After reading the fourth section of chapter 4, Software Issues and Trends, read theses article on the <a href="patriot_bug.pdf" class="bg-info text-white" target="_blank">Patriot Bug</a> and <a href="BugFreeSoftware.pdf" class="bg-info text-white" target="_blank">Bug-Free Software</a>
+                <br />
+            </p>
+            <p>
+                Think about the implications of loss of life from software bugs.<br />
+                Consider the costs in time and money in creating bug-free software.<br />
+            </p>
+            <p>
+                Reflect on these ideas, and what you have read in the chapter.
+                <br />
+                (50) 8.  Briefly summarize how an organization can resolve the conflict between creating error free software and controlling costs.<br />
+
+                <!-- Enter your answer in the VALUE field below   GROK -->
+                <input name="q8" id="q8" size="120" maxlength="120" class="form-control" value="Enter your answer here" type="text">
+            </p>
+
+            <p>
+               <br />
+                (50) 9.  Briefly summarize what you consider the most important issue in software trends.<br />
+
+                <!-- Enter your answer in the VALUE field below   GROK -->
+                <input name="q9" id="q9" size="120" maxlength="120" class="form-control" value="Enter your answer here" type="text">
+            </p>
+
+            <hr />
+
+
+        </div>
+
+        <!--  From here to end difference question numbers and Summative numbering for PDF of file uploaded to D2L    -->
+
+
+        <div class="col-lg-12"><a href="#ExercisePDF" class="btn btn-info" data-toggle="collapse">Exercise-PDF File Creation</a></div>
+
+        <div id="ExercisePDF" class="collapse in  col-lg-12">
+            <p>
+                Use a web browser to verify that you have published your website to https://classes.winona.edu/...
+                <br />
+                Check that your name, StarID, email, class, semester, section and all of your answers are correct and visible.
+                <br />
+                From the menu choose File&gt;Print... and using &quot;Microsoft Print to PDF&quot; save a copy of this assignment as a .pdf file in your   ' 
+                  <code><span id="dPath"></span></code>
+                <script>document.getElementById("dPath").innerHTML = Path; </script>
+                ' folder.<br />
+            </p>
+            <br />
+
+            <p>
+                (50) 10. Save your file 'WebPage.pdf' to the ' 
+                  <code><span id="ePath"></span></code>
+                <script>document.getElementById("ePath").innerHTML = Path; </script>
+                ' folder.<br />
+
+
+            </p>
+
+            <div class="text-danger">
+                <h2>WebPage.pdf</h2>
+                <hr />
+            </div>
+
+            <p>Create one .pdf (portable document format) file from the screen shots that you have taken by following these steps.</p>
+
+            <ol>
+                <li>Open File Explorer, make sure the screen shot files are properly named(Ex1, Ex2 , Ex3.. ) &nbsp; </li>
+                <li>Select all of the screen shots to be combined. </li>
+                <li>Right Click and select &#39;Print&#39; from the short-cut menu.      </li>
+                <li>In the bottom center of the &#39;Print Pictures&#39; dialog box uncheck the box &quot;Fit picture to frame&quot;</li>
+                <li>Click on &#39;Print&#39; and save the file with the name&nbsp; &quot;ScreenShots.pdf&quot; in your '
+              <code><span id="fPath"></span></code>
+                    <script>document.getElementById("fPath").innerHTML = Path; </script>
+                    ' folder.<br />
+                </li>
+            </ol>
+
+
+            <p>
+                (50) 11. Save your file 'ScreenShots.pdf' to the ' 
+                  <code><span id="gPath"></span></code>
+                <script>document.getElementById("gPath").innerHTML = Path; </script>
+                ' folder.<br />
+
+            </p>
+
+            <div class="text-danger">
+                <h2>ScreenShots.pdf</h2>
+                <hr />
+            </div>
+
+
+            <p>
+                Use PDFill to merge the <strong>WebPage.pdf</strong> file with the <strong>ScreenShots.pdf </strong>file, and save it as &#39;<strong>Summative04.pdf</strong>&#39; in ' 
+                  <code><span id="hPath"></span></code>
+                <script>document.getElementById("hPath").innerHTML = Path; </script>
+                ' folder.<br />
+
+            </p>
+
+
+            <p>(50) 12. Upload your file 'Summative04.pdf' to the D2L 'Summative04' Assignment folder.</p>
+
+            <div class="text-danger">
+                <h2>Summative04.pdf</h2>
+            </div>
+            <hr />
+
+        </div>
+
+
+
+
+        <div class="col-lg-12"><a href="#ExerciseAssignmentSubmission" class="btn btn-info" data-toggle="collapse">Exercise-Assignment Submission</a></div>
+
+        <div id="ExerciseAssignmentSubmission" class="collapse in  col-lg-12">
+            <p>
+                Use a browser to view your completed and published website at: https://classes.winona.edu/...     
+                <br />
+                Ensure that you have linked this assignment on your home page.
+                Note that your screen shots do not have to be completed to perform this step.<br>
+            </p>
+
+            (50) 13. Home Page Hyperlink<br />
+            Check and verify that this assignment is hyperlinked on your home page.<br />
+            <br />
+
+            (50) 14. Assignment submission<br />
+            Press the Submit button at the top or bottom of this page.
+                Read and follow instructions on the confirmation page.&nbsp; Correct any errors.
+        </div>
+        <hr />
+
+
+
+        <div class="col-lg-12">
+            <br />
+            <input class="text-danger btn-block btn-lg" name="Submit" value="Submit" type="submit">
+            <br />
+        </div>
+
+
+    </form>
+
+
+
+    <!-- Creative Commons License Info -->
+    <div id="xLicense" class=" col-lg-12 text-muted"></div>
+
+    <div id="xfooter" class=" col-lg-12 text-muted"></div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="../../ReadOnly/jquery-1.js"></script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../../ReadOnly/bootstrap.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap -->
+    <link href="../../ReadOnly/bootstrap.css" rel="stylesheet">
+
+    <!-- constant file to update email, firstname, lastname, starid, section on students' pages -->
+    <script src="../constants.js"></script>
+    <script src="../../ReadOnly/CourseConstants.js"></script>
+
+    <!-- model assignment file, version 1 released 2018/02/18 PgP -->
+
+    <title>MIS362 Formative06</title>
+</head>
+
+<body onload="setVariables()"> 
+
+  <form class="container-fluid" action="https://eprofessor.azurewebsites.net/code/ProcessFormData.asp" method="post" name="frmAssignment" id="frmAssignment">
+    <input name="InstID" id="InstID" value="00617282" type="hidden">
+
+    <h1 class=" text-center">Telecommunications and Networks</h1>
+
+<!-- -start-Student, class and assignment information. Assignment hard-coded, other values from constants.js file-start -->
+    <div class="row col-lg-12">
+      <div class="col-lg-3">
+        <label class="text-primary" for="FirstName">First Name:</label>
+        <input class="form-control" name="FirstName" id="FirstName"  type="text" value="default first name" readonly="readonly">
+      </div>
+      <div class="col-lg-3">
+        <label class="text-primary" for="LastName">Last Name:</label>
+        <input class="form-control" name="LastName" id="LastName"  type="text" value="default last name" readonly="readonly">
+      </div>
+      <div class="col-lg-3">
+        <label class="text-primary" for="pin">StarID:</label>
+        <input class="form-control" name="pin" id="pin"  type="text" value="default StarID" readonly="readonly">
+      </div>
+      <div class="col-lg-3">
+        <label class="text-primary" for="email">Email:</label>
+        <input class="form-control" name="email" id="email"  type="email" value="default email address" readonly="readonly">
+      </div>
+    </div>
+
+    <div class="row col-lg-12">
+      <div class="col-lg-3">
+        <label class="text-primary" for="semester">Semester:</label>
+        <input class="form-control" name="semester" id="semester"  type="text" value="default" readonly="readonly">
+     </div>
+      <div class="col-lg-3">
+        <label class="text-primary" for="class">Class:</label>
+        <input class="form-control" name="class" id="class" value="xClass" type="text" readonly="readonly">
+      </div>
+      <div class="col-lg-3">
+        <label class="text-primary" for="section">Section:</label>
+        <input class="form-control" name="section" id="section"  value="default" type="text"  readonly="readonly">
+      </div>
+      <div class="col-lg-3"> 
+        <label class="text-primary" for="assignment">Assignment:</label>
+        <input class="form-control" name="assignment" id="assignment" value="Formative06" type="text" readonly="readonly">
+      </div>    
+    </div>
+<!-- -end-Student, class and assignment information-end -->
+
+<!-- Calculate the correct path for saving the files -->
+<script>Path = "&#92;OneDrive - MNSCU&#92;" + xClass + "&#92;" + document.getElementById("assignment").value + "&#92;"; </script> 
+
+
+        <div class="col-lg-12">
+            <br /><input class="text-danger btn-block btn-lg" name="Submit" value="Submit" type="submit"> <br />
+        </div>
+  
+        <div class="col-lg-12 h3 text-danger">
+            90 Points <hr />
+        </div>
+      
+<!-- -start-objectives-start -->
+    <div class="col-lg-12"><a href="#Objectives" class="btn btn-info" data-toggle="collapse">Learning Objectives</a></div>      
+      <div id="Objectives" class=" collapse in col-lg-12">
+
+<!--Above this line similar except for Assignment number and title   -->
+
+  <p>After completing this assignment you will be familiar with:</p>
+  <ul>
+    <li>communication issues</li>
+    <li>government interest in communications</li>
+    <li>privacy issues in communications</li>
+  </ul>
+  <hr />
+
+
+
+
+</div>
+
+<div class="col-lg-12"><a href="#Overview" class="btn btn-info" data-toggle="collapse">Assignment Overview</a></div>
+      
+<div id="Overview" class="collapse in  col-lg-12">
+  <h2>Note: 
+  Save this  assignment to your website.<br />
+  </h2>
+<p>The purpose of this assignment is to consider the implications of 
+voice, data and video communications via networks to businesses and organizations. <br />
+</p>
+  <ul>
+    <li>Similarities between network, telephone and mobile communication 
+	systems.</li>
+    <li>Differences between network, telephone and mobile communication systems.</li>
+	  <li>Convergence of legacy phone systems and computer networks.</li>
+      <li>Ease of digital communication leads to ease of intercepting those communications.</li>
+  </ul>
+  <p>This exercise will investigate some of the current issues.</p>
+  <hr />
+
+</div>
+
+
+<div class=" col-lg-12"><a href="#Exercise01" class="btn btn-info" data-toggle="collapse">Exercise 1-Networking</a></div>        
+      
+<div id="Exercise01" class="collapse in  col-lg-12">
+ 
+    <p >Consider the problem that would occur if the system depicted 
+  were used for voice communications.</p>
+	<p ><img alt="geosync orbiting satellite"  src="GeoSync.jpg" class="img-fluid img-responsive img-rounded"  /><br />
+    Hint: consider the effect of the type of the communications satellite's orbit.<br />
+	Assume that the speed of light and microwaves is 186,000 miles per second</p>
+	<hr />
+
+  <p>(10) 1. Voice communication problem <br />
+    <input type="text" name="q1" id="q1" size="120" maxlength="120" class="form-control" value="Problem:"/>
+
+</p>
+    <hr />
+  <p> Give an example of each communication channel listed: <br />
+
+
+  (10) 2. Simplex example.
+
+    <input type="text" name="q2" id="q2" size="120" maxlength="120" class="form-control" value=" Simplex:  "/>
+
+  </p>
+
+  <p> (10) 3. Half-duplex example.
+
+    <input type="text" name="q3" id="q3" size="120" maxlength="120" class="form-control" value="Half-duplex:   "/>
+
+  </p>
+  <p> (10) 4. Full-duplex example.
+
+    <input type="text" name="q4" id="q4" size="120" maxlength="120" class="form-control" value="Full-duplex: "/>
+
+  </p>
+
+
+  <hr />
+  <p>(10) 5. What is the medium required for wireless signal transmission?
+    <br />
+    <input type="text" name="q5" id="q5" size="120" maxlength="120" class="form-control" value="wireless signal medium:   "/>
+  </p>
+<hr />
+</div>
+
+
+<div class=" col-lg-12"><a href="#Exercise02" class="btn btn-info" data-toggle="collapse">Exercise 2-Communications Privacy</a></div>        
+      
+<div id="Exercise02" class="collapse in  col-lg-12">
+
+  <hr />
+<p>Research communications</p>
+<p>Electronic Frontier Foundation and <a href="https://www.nsa.gov/" class="bg-info text-white" target="_blank">NSA</a> Spying:&nbsp;
+<a href="https://www.eff.org/mention/year-after-snowden-tech-companies-are-more-transparent" class="bg-info text-white" target="_blank">
+https://www.eff.org/mention/year-after-snowden-tech-companies-are-more-transparent</a> </p>
+	<p>(10) 6.  Based on your research and discussions 
+with fellow students, state your opinion regarding whether NSA surveillance is 
+necessary, and legal.<br />
+      
+
+      <input type="text" name="q6" id="q6" size="120" maxlength="120" class="form-control"  value="NSA surveillance necessary (yes/no)?   "/></p>
+    <p>&nbsp;</p>
+    <p>(10) 7.  Do you think the NSA surveillance is legal? Explain briefly.<br />
+        <input type="text" name="q7" id="q7" size="120" maxlength="120" class="form-control"  value="NSA surveillance legal? Explain:   "/> </p>
+	<p>ref: <a href="https://en.wikipedia.org/wiki/Person_of_Interest_%28TV_series%29" class="bg-info text-white" target="_blank">Person of Interest (TV series)</a></p>
+<hr />
+
+
+
+</div>
+
+
+<!--  From here to end difference question numbers and Summative numbering for PDF of file uploaded to D2L    -->
+
+     
+  <div class="col-lg-12"><a href="#ExerciseAssignmentSubmission" class="btn btn-info" data-toggle="collapse">Exercise-Assignment Submission</a></div>
+ 
+  <div id="ExerciseAssignmentSubmission" class="collapse in  col-lg-12">
+                <p>Use a browser to view your completed and published website at: https://classes.winona.edu/...      <br /> 
+                    Ensure that you have linked this assignment on your home page.
+                Note that your screen shots do not have to be completed to perform this step.<br />  </p>
+
+            (10) 8. Home Page Hyperlink<br />
+            Check and verify that this assignment is hyperlinked on your home page.<br /><br />
+
+            (10) 9. Assignment submission<br />
+            Press the Submit button at the top or bottom of this page.
+                Read and follow instructions on the confirmation page.&nbsp; Correct any errors.</div> 
+           <hr />
+
+
+ 
+     
+      <div class="col-lg-12"><br /><input class="text-danger btn-block btn-lg" name="Submit" value="Submit" type="submit"> <br /></div>
+
+  
+  </form> 
+
+
+
+    <!-- Creative Commons License Info -->
+    <div id="xLicense" class=" col-lg-12 text-muted" ></div>
+
+   <div id="xfooter" class=" col-lg-12 text-muted"></div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+	<script src="../../ReadOnly/jquery-1.js"></script>
+
+	<!-- Include all compiled plugins (below), or include individual files as needed --> 
+	<script src="../../ReadOnly/bootstrap.js"></script>
+  
+</body></html>

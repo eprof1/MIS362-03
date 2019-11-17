@@ -1,0 +1,43 @@
+
+
+
+# Python 3 reference:  https://runestone.academy/runestone/static/thinkcspy/index.html
+
+# create a numeric variable to set the upper range of permissible values
+# ref: https://runestone.academy/runestone/static/thinkcspy/SimplePythonData/Variables.html
+    # statement here
+
+# create a Boolean variable that allows play while it is true
+    # statement here
+
+# create While loop, ref:  https://runestone.academy/runestone/static/thinkcspy/MoreAboutIteration/ThewhileStatement.html?highlight=while
+    # statement here
+
+    # obtain input from user by displaying message that explains how to 'roll' and how to 'quit'
+    # ref: https://runestone.academy/runestone/static/thinkcspy/SimplePythonData/Input.html
+    # statement here
+
+    # create if/else conditional to determine if Q was not pressed
+    # ref: https://runestone.academy/runestone/static/thinkcspy/Selection/ConditionalExecutionBinarySelection.html?highlight=else
+
+    # if condition first, compare value of variable roll to q
+    # ref: http://interactivepython.org/runestone/static/thinkcspy/Selection/BooleanValuesandBooleanExpressions.html?highlight=comparison
+    # statement here
+
+        # execute this code when prior statement is True
+
+        # calculate a random number for toss of die, assign to die toss variable. Use 'randint' function.  Random Integer
+        # ref: http://interactivepython.org/runestone/static/thinkcspy/GUIandEventDrivenProgramming/11_gui_program_example.html?highlight=randint
+        # statement here
+
+        # print die toss variable result to screen
+        # ref: http://interactivepython.org/runestone/static/thinkcspy/Functions/Functionsthatreturnvalues.html
+        # statement here
+
+    #else condition that executes when if statement is false.  'q' was pressed, rolling variable is false, so exit program
+    # statement here
+    # statement here
+
+# end of game, print a message to the player
+# statement here
+

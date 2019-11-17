@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap -->
+    <link href="../../ReadOnly/bootstrap.css" rel="stylesheet">
+
+    <!-- constant file to update email, firstname, lastname, starid, section on students' pages -->
+    <script src="../constants.js"></script>
+    <script src="../../ReadOnly/CourseConstants.js"></script>
+
+    <!-- model assignment file, version 1 released 2018/02/18 PgP -->
+
+    <title>MIS362 Formative02</title>
+</head>
+
+<body onload="setVariables()">
+
+    <form class="container-fluid" action="https://eprofessor.azurewebsites.net/code/ProcessFormData.asp" method="post" name="frmAssignment" id="frmAssignment">
+        <input name="InstID" id="InstID" value="00617282" type="hidden">
+
+        <h1 class=" text-center">Spreadsheet Review</h1>
+
+        <!-- -start-Student, class and assignment information. Assignment hard-coded, other values from constants.js file-start -->
+        <div class="row col-lg-12">
+            <div class="col-lg-3">
+                <label class="text-primary" for="FirstName">First Name:</label>
+                <input class="form-control" name="FirstName" id="FirstName" type="text" value="default first name" readonly="readonly">
+            </div>
+            <div class="col-lg-3">
+                <label class="text-primary" for="LastName">Last Name:</label>
+                <input class="form-control" name="LastName" id="LastName" type="text" value="default last name" readonly="readonly">
+            </div>
+            <div class="col-lg-3">
+                <label class="text-primary" for="pin">StarID:</label>
+                <input class="form-control" name="pin" id="pin" type="text" value="default StarID" readonly="readonly">
+            </div>
+            <div class="col-lg-3">
+                <label class="text-primary" for="email">Email:</label>
+                <input class="form-control" name="email" id="email" type="email" value="default email address" readonly="readonly">
+            </div>
+        </div>
+
+        <div class="row col-lg-12">
+            <div class="col-lg-3">
+                <label class="text-primary" for="semester">Semester:</label>
+                <input class="form-control" name="semester" id="semester" type="text" value="default" readonly="readonly">
+            </div>
+            <div class="col-lg-3">
+                <label class="text-primary" for="class">Class:</label>
+                <input class="form-control" name="class" id="class" value="xClass" type="text" readonly="readonly">
+            </div>
+            <div class="col-lg-3">
+                <label class="text-primary" for="section">Section:</label>
+                <input class="form-control" name="section" id="section" value="default" type="text" readonly="readonly">
+            </div>
+            <div class="col-lg-3">
+                <label class="text-primary" for="assignment">Assignment:</label>
+                <input class="form-control" name="assignment" id="assignment" value="Formative02" type="text" readonly="readonly">
+            </div>
+        </div>
+        <!-- -end-Student, class and assignment information-end -->
+
+        <!-- Calculate the correct path for saving the files -->
+        <script>Path = "&#92;OneDrive - MNSCU&#92;" + xClass + "&#92;" + document.getElementById("assignment").value + "&#92;"; </script>
+
+        <div class="col-lg-12">
+            <br />
+            <input class="text-danger btn-block btn-lg" name="Submit" value="Submit" type="submit">
+            <br />
+        </div>
+
+        <div class="col-lg-12 h3 text-danger">
+            150 Points
+            <hr />
+        </div>
+
+        <!-- -start-objectives-start -->
+        <div class="col-lg-12"><a href="#Objectives" class="btn btn-info" data-toggle="collapse">Learning Objectives</a></div>
+        <div id="Objectives" class=" collapse in col-lg-12">
+
+            <!--Above this line similar except for Assignment number and title   -->
+
+            <p>After completing this assignment you will be able to <strong>use</strong> a computer to</p>
+            <ul>
+                <li>plan and create a spreadsheet application in an organized fashion</li>
+                <li>create a spreadsheet application that is 'self explanatory'</li>
+                <li>search for an appropriate built-in function to solve a problem</li>
+            </ul>
+            <p>The exercises in this assignment should be done in the order presented.</p>
+            <hr />
+        </div>
+
+        <div class="col-lg-12"><a href="#Overview" class="btn btn-info" data-toggle="collapse">Assignment Overview</a></div>
+
+        <div id="Overview" class="collapse in  col-lg-12">
+
+            <p>The purpose of this assignment is to review spreadsheet software. Some possibile spreadsheet uses are:</p>
+            <ul>
+                <li>Make your spreadsheet speak for itself using formatting, named ranges and protection settings </li>
+                <li>Summarize large amounts of data visually with charts</li>
+                <li>Manipulate not just numbers, but text</li>
+                <li>Use built in functions to determine rates of return and loan repayments</li>
+                <li>Quickly retrieve specific values from large data sets</li>
+                <li>Automate repetitive tasks to save time</li>
+            </ul>
+            <p>This assignment will cover a variety of ways to use a spreadsheet to illustrate the wide range of functionality available. You are encouraged to explore on your own to find additional features that will make your life and present or future jobs easier.</p>
+
+        </div>
+
+        <h1 class="text-center">Excel 365</h1>
+        <hr />
+
+        <div class=" col-lg-12"><a href="#Exercise01" class="btn btn-info" data-toggle="collapse">Exercise 1-Spreadsheet Basics</a></div>
+
+        <div id="Exercise01" class="collapse in  col-lg-12">
+
+            <p>
+                Download <a href="Formative02.xlsx" class="bg-info text-white">this Excel file</a>, and save it as 
+     &quot;Formative02&quot; in your ' 
+            <code><span id="bPath"></span></code>
+                <script>document.getElementById("bPath").innerHTML = Path; </script>
+                ' folder.<br />
+
+
+
+                NAMED RANGES-<br />
+                Open the worksheet '1-NamedRanges'<br />
+                <br />
+                Create named ranges in cells B1 (indicating total sales) and B2(indicating total costs)<br />
+                Then create a formula in cell B3 using the total sales and total costs named ranges that subtracts the total costs from total sales to arrive at the profit.
+                <br />
+                <br />
+
+
+                1. (10) Copy and paste your formula (not the numeric answer) from cell B3 into the box below:<br />
+
+                <!-- Enter your answer in the VALUE field below   GROK -->
+                <input type="text" name="q1" id="q1" size="120" maxlength="120" class="form-control" value="Enter your formula here">
+            </p>
+            <hr />
+
+
+            <p>
+                FINANCIAL FUNCTIONS-&gt; PMT-Loan Repayment<br />
+                Refer to worksheet 2-PMT<br />
+                Using the Pmt( ) function create and enter a formula in cell B5 that determines the MONTHLY payment of the loan, based on the information given.<br />
+                Assume a future value of zero, and that the payments are made at the end of the period.
+            </p>
+            <p>
+                2. (10)Copy and paste the formula you entered in cell B5 into the text box below.<br />
+
+                <!-- Enter your answer in the VALUE field below   GROK -->
+                <input type="text" name="q2" id="q2" size="120" maxlength="120" class="form-control" value="Enter your formula here">
+            </p>
+            <hr />
+
+            <p>
+                3. (10) Why does the answer in cell B5 appear in red, enclosed in parentheses?<br />
+
+                <!-- Enter your answer in the VALUE field below   GROK -->
+                <input type="text" name="q3" id="q3" size="120" maxlength="120" class="form-control" value="Enter your formula here">
+            </p>
+            <hr />
+
+
+            <p>
+                VLOOKUP-seeking related values
+                <br />
+                In cells D10:D14 of worksheet 3-Vlookup you are given numbers indicating the quantity of ads purchased.
+                <br />
+                Using that information, create formulas 
+                using the Vlookup() function in cells E10:E14 that calculates the total cost of the ads.<br />
+                <strong>You MUST use the Vlookup( ) function. </strong>
+                <br />
+                4. (10) Enter your answer in the text box below.<br />
+
+                <!-- Enter your answer in the VALUE field below   GROK -->
+                <input type="text" name="q4" id="q4" size="120" maxlength="120" class="form-control" value="Enter your formula here">
+            </p>
+            <hr />
+
+            <p>STRINGS- manipulating text</p>
+            <p>
+                In the worksheet 4-StringParsing you are given  data that contains year, quarter and GNP.
+                <br />
+                This data is all contained in the first column.<br />
+                You are to create formulas using string functions (referred to in Excel as TEXT functions) to isolate the year, quarter and GNP value into columns B, C and D.<br />
+                Specifically, enter these formulas into cells B6:D23
+            </p>
+
+            <p>
+                5. (10) What was the formula you used to isolate the year? Enter it in the text box below.<br />
+
+                <!-- Enter your answer in the VALUE field below   GROK -->
+                <input type="text" name="q5" id="q5" size="120" maxlength="120" class="form-control" value="Enter your formula here">
+            </p>
+            <br />
+
+            <p>
+                6. (10) What was the formula you used to isolate the quarter? Enter it in the text box below.<br />
+
+                <!-- Enter your answer in the VALUE field below   GROK -->
+                <input type="text" name="q6" id="q6" size="120" maxlength="120" class="form-control" value="Enter your formula here">
+            </p>
+            <br />
+            <hr />
+            Calculate the average GNP in cell D24.<br />
+
+            <p>
+                7. (10) What is the average GNP for the data provided? Enter it in the text box below.<br />
+
+                <!-- Enter your answer in the VALUE field below   GROK -->
+                <input type="text" name="q7" id="q7" size="120" maxlength="120" class="form-control" value="Enter your numeric answer here">
+            </p>
+            <hr />
+
+        </div>
+
+
+        <div class=" col-lg-12"><a href="#Exercise02" class="btn btn-info" data-toggle="collapse">Exercise 2-Charting</a></div>
+
+        <div id="Exercise02" class="collapse in  col-lg-12">
+
+            <p>
+                In worksheet 5-Charts you are given Price and Quantity data.<br />
+                Create an X-Y scatter chart on the same worksheet.<br />
+                Add a Linear Trendline to the chart, make sure to &quot;Display the Equation on Chart&quot; and &quot;Display R-squared value on Chart&quot;
+            </p>
+            <p>
+                <img src="Trendline.jpg" class="img-fluid img-responsive img-rounded" alt="trendlines" /></p>
+
+            <p>8. (10) Is Price sensitive to the Quantity sold?<br />
+            </p>
+            <!-- Enter your answer in the VALUE field below   GROK -->
+            <input name="q8" id="q8" size="120" maxlength="120" class="form-control" value="Enter your brief answer here" type="text">
+            <br />
+
+            <hr />
+
+        </div>
+
+        <!--  From here to end difference question numbers and Summative numbering for PDF of file uploaded to D2L    -->
+
+
+        <div class="col-lg-12"><a href="#ExercisePDF" class="btn btn-info" data-toggle="collapse">Exercise-D2L Assignment Submission</a></div>
+
+        <div id="ExercisePDF" class="collapse in  col-lg-12">
+
+            <p>
+                Save your file 'Formative02.xlsx' to your '
+          <code><span id="ePath"></span></code>
+                <script>document.getElementById("ePath").innerHTML = Path; </script>
+                ' folder.<br />
+            </p>
+
+
+            <p>(50) 9. Upload your completed file 'Formative02.xlsx' to the D2L 'Formative02' Assignment folder.</p>
+        </div>
+
+        <div class="col-lg-12 text-danger">
+            <h2>Formative02.xlsx</h2>
+            <hr />
+
+        </div>
+
+
+
+
+
+        <div class="col-lg-12"><a href="#ExerciseAssignmentSubmission" class="btn btn-info" data-toggle="collapse">Exercise-Assignment Submission</a></div>
+
+        <div id="ExerciseAssignmentSubmission" class="collapse in  col-lg-12">
+            <p>
+                Use a browser to view your completed and published website at: https://classes.winona.edu/...     
+                <br />
+                Ensure that you have linked this assignment on your home page.
+                Note that your screen shots do not have to be completed to perform this step.<br />
+            </p>
+
+            (10) 10. Home Page Hyperlink<br />
+            Check and verify that this assignment is hyperlinked on your home page.<br />
+            <br />
+
+            (10) 11. Assignment submission<br />
+            Press the Submit button at the top or bottom of this page.
+                Read and follow instructions on the confirmation page.&nbsp; Correct any errors.
+        </div>
+        <hr />
+
+
+
+
+        <div class="col-lg-12">
+            <br />
+            <input class="text-danger btn-block btn-lg" name="Submit" value="Submit" type="submit">
+            <br />
+        </div>
+
+
+    </form>
+
+
+
+    <!-- Creative Commons License Info -->
+    <div id="xLicense" class=" col-lg-12 text-muted"></div>
+
+    <div id="xfooter" class=" col-lg-12 text-muted"></div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="../../ReadOnly/jquery-1.js"></script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../../ReadOnly/bootstrap.js"></script>
+
+</body>
+</html>

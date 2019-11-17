@@ -1,0 +1,469 @@
+<!doctype html>
+<html lang="en">
+
+<!-- 2/22/2019 PgP this is the new model assignment, containing split constants files, new One-Drive Path, new location for support files -->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap -->
+    <link href="../../ReadOnly/bootstrap.css" rel="stylesheet">
+
+    <!-- constant file to update email, firstname, lastname, starid, section on students' pages -->
+    <script src="../constants.js"></script>
+    <script src="../../ReadOnly/CourseConstants.js"></script>
+
+    <!-- model assignment file, version 1 released 2018/02/18 PgP -->
+
+    <title>MIS362 Summative10</title>
+</head>
+
+<body class="container-fluid" onload="setVariables()">
+
+    <form class="container-fluid" action="https://eprofessor.azurewebsites.net/code/ProcessFormData.asp" method="post" name="frmAssignment" id="frmAssignment">
+        <input name="InstID" id="InstID" value="00617282" type="hidden">
+
+        <h1 class=" text-center">Knowledge Management and Specialized Information Systems</h1>
+
+
+        <!-- -start-Student, class and assignment information. Assignment hard-coded, other values from constants.js file-start -->
+        <div class="row col-lg-12">
+            <div class="col-lg-3">
+                <label class="text-primary" for="FirstName">First Name:</label>
+                <input class="form-control" name="FirstName" id="FirstName" type="text" value="default first name" readonly="readonly">
+            </div>
+            <div class="col-lg-3">
+                <label class="text-primary" for="LastName">Last Name:</label>
+                <input class="form-control" name="LastName" id="LastName" type="text" value="default last name" readonly="readonly">
+            </div>
+            <div class="col-lg-3">
+                <label class="text-primary" for="pin">StarID:</label>
+                <input class="form-control" name="pin" id="pin" type="text" value="default StarID" readonly="readonly">
+            </div>
+            <div class="col-lg-3">
+                <label class="text-primary" for="email">Email:</label>
+                <input class="form-control" name="email" id="email" type="email" value="default email address" readonly="readonly">
+            </div>
+        </div>
+
+        <div class="row col-lg-12">
+            <div class="col-lg-3">
+                <label class="text-primary" for="semester">Semester:</label>
+                <input class="form-control" name="semester" id="semester" type="text" value="default" readonly="readonly">
+            </div>
+            <div class="col-lg-3">
+                <label class="text-primary" for="class">Class:</label>
+                <input class="form-control" name="class" id="class" value="xClass" type="text" readonly="readonly">
+            </div>
+            <div class="col-lg-3">
+                <label class="text-primary" for="section">Section:</label>
+                <input class="form-control" name="section" id="section" value="default" type="text" readonly="readonly">
+            </div>
+            <div class="col-lg-3">
+                <label class="text-primary" for="assignment">Assignment:</label>
+                <input class="form-control" name="assignment" id="assignment" value="Summative10" type="text" readonly="readonly">
+            </div>
+        </div>
+        <!-- -end-Student, class and assignment information-end -->
+
+        <!-- Calculate the correct path for saving the files -->
+        <script>Path = "&#92;OneDrive - MNSCU&#92;" + xClass + "&#92;" + document.getElementById("assignment").value + "&#92;"; </script>
+
+
+        <div class="col-lg-12">
+            <br />
+            <input class="text-danger btn-block btn-lg" name="Submit" value="Submit" type="submit">
+            <br />
+        </div>
+
+        <div class="col-lg-12 h3 text-danger">
+            800 Points
+            <hr />
+        </div>
+
+        <!-- -start-objectives-start -->
+        <div class="col-lg-12"><a href="#Objectives" class="btn btn-info" data-toggle="collapse">Learning Objectives</a></div>
+        <div id="Objectives" class=" collapse in col-lg-12">
+
+            <!--Above this line similar except for Assignment number and title   -->
+
+            <p>These exercises introduce concepts used to define how organizations use knowledge management and specialized information systems.</p>
+            <p>After completing this module you will be able to:</p>
+            <ol>
+                <li>Discuss the relationships between data, information, and knowledge</li>
+                <li>&nbsp;Identify the benefits associated with a sound knowledge management program</li>
+                <li>&nbsp;List some of the tools and techniques used in knowledge management</li>
+                <li>&nbsp;Define the term &#39;artificial intelligence&#39; and state the objective of developing artificial intelligence systems</li>
+                <li>&nbsp;List the characteristics of intelligent behavior and compare the performance of natural and artificial intelligence systems for each of these characteristics</li>
+                <li>&nbsp;Identify the major components of the artificial intelligence field and provide one example of each type of system</li>
+                <li>&nbsp;Discuss the use of multimedia in a business setting</li>
+                <li>&nbsp;Define the terms &#39;virtual reality&#39; and &#39;augmented reality&#39; and provide examples of these applications</li>
+                <li>&nbsp;Discuss examples of specialized systems for organizational and individual use.</li>
+            </ol>
+            <hr />
+        </div>
+
+
+        <div class="col-lg-12"><a href="#Overview" class="btn btn-info" data-toggle="collapse">Assignment Overview</a></div>
+
+        <div id="Overview" class="collapse in  col-lg-12">
+
+
+            <p>
+                The goal of this assignment is to familiarize you with how organizations make use of knowledge management to further the objectives of the organization.
+                <br />
+                You are expected to develop a working knowledge of the following tasks.<br />
+                If you are having trouble there are several resources available, besides a Google Search<br />
+                You can also ask a teaching assistant or the instructor for assistance.
+            </p>
+            <ol>
+                <li>Introduction to Knowledge Management-KM
+            	<ol>
+                    <li>Applications and Benefits</li>
+                    <li>Best Practices</li>
+                    <li>KM Technologies</li>
+                </ol>
+                </li>
+                <li>Overview of Artificial Intelligence-AI<ol>
+                    <li>AI in Perspective</li>
+                    <li>Nature of Intelligence</li>
+                    <li>Brain-Computer Interface</li>
+                    <li>Expert Systems</li>
+                    <li>Robotics</li>
+                    <li>Vision Systems</li>
+                    <li>Natural Language Processing</li>
+                    <li>Learning Systems</li>
+                    <li>Neural Networks</li>
+                    <li>Other AI Applications</li>
+                    </ol>
+                </li>
+                <li>Multimedia and Virtual Reality-VR<ol>
+                    <li>Overview of Multimedia</li>
+                    <li>Overview of VR</li>
+                    <li>Interface Devices</li>
+                    <li>Forms of VR</li>
+                    <li>VR Applications</li>
+                    </ol>
+                </li>
+                <li>Specialized Systems
+                    <ol>
+                        <li>Assistive Technology</li>
+                        <li>Game Theory</li>
+                        <li>Informatics</li>
+                    </ol>
+                </li>
+            </ol>
+            <hr />
+        </div>
+
+
+        <div class=" col-lg-12"><a href="#Exercise01" class="btn btn-info" data-toggle="collapse">Exercise 1-Introduction to K</a><a href="#Exercise01">nowledge Management</a></div>
+
+        <div id="Exercise01" class="collapse in col-lg-12">
+            <p>
+                After reading the first 
+                two sections of chapter 10, you will realize that e and m Commerce have changed relationships and expectations between organizations, businesses, consumers and governments in the last dozen years.
+                <br />
+            </p>
+
+            <p>
+                Use the NYT, WSJ, Flipster, or the internet to find examples of the following types of commerce.
+            </p>
+
+            <p>
+                (50) 1.  B2B:<br />
+                <!-- Enter your answer in the VALUE field below   GROK -->
+                <input name="q1" id="q1" size="120" maxlength="120" class="form-control" value="b2b:" type="text"><br />
+            </p>
+
+            <p>
+                (50) 2.  B2C:<br />
+                <!-- Enter your answer in the VALUE field below   GROK -->
+                <input name="q2" id="q2" size="120" maxlength="120" class="form-control" value="b2cs:" type="text"><br />
+            </p>
+            <p>
+                (50) 3.  C2C:<br />
+                <!-- Enter your answer in the VALUE field below   GROK -->
+                <input name="q3" id="q3" size="120" maxlength="120" class="form-control" value="c2c:" type="text"><br />
+            </p>
+            <p>
+                (50) 4.  e-Government, either G2C, G2B, G2G:<br />
+                <!-- Enter your answer in the VALUE field below   GROK -->
+                <input name="q4" id="q4" size="120" maxlength="120" class="form-control" value="eGov:" type="text"><br />
+            </p>
+            <p>
+                (50) 5.  Multistage model, but not HP:<br />
+                <!-- Enter your answer in the VALUE field below   GROK -->
+                <input name="q5" id="q5" size="120" maxlength="120" class="form-control" value="multistage:" type="text"><br />
+            </p>
+
+
+            <hr />
+
+        </div>
+
+
+
+        <div class="col-lg-12"><a href="#Exercise02" class="btn btn-info" data-toggle="collapse">Exercise 2- Overview of AI</a></div>
+        <div id="Exercise02" class="collapse in col-lg-12">
+
+            <p>
+                After reading the third section of chapter 7, 
+                and based on your major and career interests, research a company you admire that is making novel use of e or m Commerce.<br />
+                Use the NYT, WSJ, Flipster, or the internet to do this research.<br />                
+            </p>
+
+            <p>
+                (50) 6. What is the company and the novel application of e or m commerce?            
+           <br />
+
+                <!-- Enter your answer in the VALUE field below   GROK -->
+                <input name="q6" id="q6" size="120" maxlength="120" class="form-control" value="company, application:" type="text">
+            </p>
+
+            <hr />
+            <p>
+                (50) 7. Use the Snipping Tool and make a screen shot of the article or company website, depicting this e or m commerce application.<br />
+                <br />
+
+                <!--  PgP 2/4/2018 create path using constants and current document assignment -->
+                Save the screen shot  as &quot;Ex2&quot; in your ' 
+                  <code><span id="aPath"></span></code>
+                <script>document.getElementById("aPath").innerHTML = Path </script>
+                ' folder.<br />
+
+                You will be combining screen shots from several exercises at the end of this assignment, just as you did in 
+                  <a href="https://eprofessor.azurewebsites.net/Formative00/Formative00.html#PDFfileCreation" class="bg-info text-white" target="_blank">Formative00</a>-PDF File Creation. 
+            </p>
+
+        </div>
+
+        <div class="col-lg-12 text-danger">
+            <h2>Screen Shot Ex2</h2>
+            <hr />
+        </div>
+
+
+        <div class="col-lg-12"><a href="#Exercise03" class="btn btn-info" data-toggle="collapse">Exercise 3-Multimedia and VR</a></div>
+
+        <div id="Exercise03" class="collapse in col-lg-12">
+
+            <p>
+                After reading the fourth section of chapter 7 
+                it becomes apparent that e and m Commerce strategies are dynamic-organizations need to be considering what to incorporate or change in the next strategic iteration.<br />
+                Use the NYT, WSJ, Flipster, or the internet to find a recent article detailing how an organization went about revising and implementing an e or m Commerce project.<br />
+            </p>
+
+            <p>
+                (50) 8.  List the organization, and briefly summarize the project results.  It is okay if it failed.<br />
+
+                <!-- Enter your answer in the VALUE field below   GROK -->
+                <input name="q8" id="q8" size="120" maxlength="120" class="form-control" value="organization, results:" type="text">
+            </p>
+            <hr />
+
+
+            <p>
+                (50) 9. Use the Snipping Tool to make a screen shot of the article or website found during your research.<br />
+
+                <!--  PgP 2/4/2018 create path using constants and current document assignment -->
+                Save the screen shot  as &quot;Ex3&quot; in your ' 
+                  <code><span id="bPath"></span></code>
+                <script>document.getElementById("bPath").innerHTML = Path </script>
+                ' folder.<br />
+
+                You will be combining screen shots from several exercises at the end of this assignment, just as you did in 
+                  <a href="https://eprofessor.azurewebsites.net/Formative00/Formative00.html#PDFfileCreation" class="bg-info text-white" target="_blank">Formative00</a>-PDF File Creation. 
+            </p>
+
+        </div>
+
+        <div class="col-lg-12 text-danger">
+            <h2>Screen Shot Ex3</h2>
+            <hr />
+        </div>
+
+
+
+
+        <div class="col-lg-12"><a href="#Exercise04" class="btn btn-info" data-toggle="collapse">Exercise 4-Specialized Systems</a></div>
+
+        <div id="Exercise04" class="collapse in col-lg-12">
+
+            <p>
+                After reading the fifth section of chapter 7, use the NYT, WSJ, Flipster, or the internet to find 
+                an article concerning outsouring of web hosting and website operations.<br />
+                Look for major issues that need to be addressed during the outsourcing process.
+            </p>
+
+            <p>
+                (50) 10. Briefly state the major issue you found.<br />
+
+                <!-- Enter your answer in the VALUE field below   GROK -->
+                <input name="q10" id="q10" size="120" maxlength="120" class="form-control" value="issue:" type="text">
+            </p>
+
+
+
+            <hr />
+
+            <p>
+                (50) 11. Log onto the Microsoft Azure Portal.
+                Search for and deploy an App Service using the Kentico Cloud Sample. Note: it should be free, if not, search for an equivalent free web App Service.<br />
+                Name it &#39;Summative10&#39; and allow it to deploy.<br />
+                Take a look at the web interface, and all of the configuration options.<br />
+                Use the Snipping Tool to make a screen shot of the &#39;Resource Group&#39; <a href="../Summative10/WebAppService.PNG" class="bg-info text-white" target="_blank" >configuration page in Azure</a>, showing the entire page, along with your StarID.<br />
+                Alternatively, if you encounter an error while deploying, make a screen shot of the Azure Portal and the error message.<br />
+
+                <!--  PgP 2/4/2018 create path using constants and current document assignment -->
+                Save the screen shot  as &quot;Ex4&quot; in your ' 
+                  <code><span id="cPath"></span></code>
+                <script>document.getElementById("cPath").innerHTML = Path </script>
+                ' folder.<br />
+
+                You will be combining screen shots from several exercises at the end of this assignment, just as you did in 
+                  <a href="https://eprofessor.azurewebsites.net/Formative00/Formative00.html#PDFfileCreation" class="bg-info text-white" target="_blank">Formative00</a>-PDF File Creation. 
+            </p>
+
+
+
+        </div>
+
+
+        <div class="col-lg-12 text-danger">
+            <h2>Screen Shot Ex4</h2>
+            <hr />
+        </div>
+
+
+
+        <!--  From here to end difference question numbers and Summative numbering for PDF of file uploaded to D2L    -->
+
+
+        <div class="col-lg-12"><a href="#ExercisePDF" class="btn btn-info" data-toggle="collapse">Exercise-PDF File Creation</a></div>
+
+        <div id="ExercisePDF" class="collapse in  col-lg-12">
+            <p>
+                Use a web browser to verify that you have published your website to https://classes.winona.edu/...
+                <br />
+                Check that your name, StarID, email, class, semester, section and all of your answers are correct and visible.
+                <br />
+                From the menu choose File&gt;Print... and using &quot;Microsoft Print to PDF&quot; save a copy of this assignment as a .pdf file in your   ' 
+                  <code><span id="dPath"></span></code>
+                <script>document.getElementById("dPath").innerHTML = Path; </script>
+                ' folder.<br />
+            </p>
+            <br />
+
+            <p>
+                (50) 12. Save your file 'WebPage.pdf' to the ' 
+                  <code><span id="ePath"></span></code>
+                <script>document.getElementById("ePath").innerHTML = Path; </script>
+                ' folder.<br />
+
+
+            </p>
+
+            <div class="text-danger">
+                <h2>WebPage.pdf</h2>
+                <hr />
+            </div>
+
+            <p>Create one .pdf (portable document format) file from the screen shots that you have taken by following these steps.</p>
+
+            <ol>
+                <li>Open File Explorer, make sure the screen shot files are properly named(Ex1, Ex2 , Ex3.. ) &nbsp; </li>
+                <li>Select all of the screen shots to be combined. </li>
+                <li>Right Click and select &#39;Print&#39; from the short-cut menu.      </li>
+                <li>In the bottom center of the &#39;Print Pictures&#39; dialog box uncheck the box &quot;Fit picture to frame&quot;</li>
+                <li>Click on &#39;Print&#39; and save the file with the name&nbsp; &quot;ScreenShots.pdf&quot; in your '
+              <code><span id="fPath"></span></code>
+                    <script>document.getElementById("fPath").innerHTML = Path; </script>
+                    ' folder.<br />
+                </li>
+            </ol>
+
+
+            <p>
+                (50) 13. Save your file 'ScreenShots.pdf' to the ' 
+                  <code><span id="gPath"></span></code>
+                <script>document.getElementById("gPath").innerHTML = Path; </script>
+                ' folder.<br />
+
+            </p>
+
+            <div class="text-danger">
+                <h2>ScreenShots.pdf</h2>
+                <hr />
+            </div>
+
+
+            <p>
+                Use PDFill to merge the <strong>WebPage.pdf</strong> file with the <strong>ScreenShots.pdf </strong>file, and save it as &#39;<strong>Summative10.pdf</strong>&#39; in ' 
+                  <code><span id="hPath"></span></code>
+                <script>document.getElementById("hPath").innerHTML = Path; </script>
+                ' folder.<br />
+
+            </p>
+
+
+            <p>(50) 14. Upload your file 'Summative10.pdf' to the D2L 'Summative10' Assignment folder.</p>
+
+
+        </div>
+
+        <div class="col-lg-12 text-danger">
+            <h2>Summative10.pdf</h2>
+        </div>
+        <hr />
+
+
+
+
+        <div class="col-lg-12"><a href="#ExerciseAssignmentSubmission" class="btn btn-info" data-toggle="collapse">Exercise-Assignment Submission</a></div>
+
+        <div id="ExerciseAssignmentSubmission" class="collapse in  col-lg-12">
+            <p>
+                Use a browser to view your completed and published website at: https://classes.winona.edu/...     
+                <br />
+                Ensure that you have linked this assignment on your home page.
+                Note that your screen shots do not have to be completed to perform this step.<br>
+            </p>
+
+            (50) 15. Home Page Hyperlink<br />
+            Check and verify that this assignment is hyperlinked on your home page.<br />
+            <br />
+
+            (50) 16. Assignment submission<br />
+            Press the Submit button at the top or bottom of this page.
+                Read and follow instructions on the confirmation page.&nbsp; Correct any errors.
+        </div>
+        <hr />
+
+
+
+        <div class="col-lg-12">
+            <br />
+            <input class="text-danger btn-block btn-lg" name="Submit" value="Submit" type="submit">
+            <br />
+        </div>
+
+
+    </form>
+
+
+
+    <!-- Creative Commons License Info -->
+    <div id="xLicense" class=" col-lg-12 text-muted"></div>
+
+    <div id="xfooter" class=" col-lg-12 text-muted"></div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="../../ReadOnly/jquery-1.js"></script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../../ReadOnly/bootstrap.js"></script>
+
+</body>
+</html>

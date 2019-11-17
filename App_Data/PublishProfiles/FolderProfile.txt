@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+PgP 7/17/2019 This file must be saved in your solution folder as /App_Data/PublishProfiles/FolderProfile.pubxml
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+PgP 6/25/2019 For VS2019 this file must be named FolderProfile.pubxml
+This file format will also work for VS2017
+PgP 7/10/2019 this is for MIS362-01, fall 2019, 000053, the online class
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <WebPublishMethod>FileSystem</WebPublishMethod>
+    <PublishProvider>FileSystem</PublishProvider>
+    <LastUsedBuildConfiguration>Debug</LastUsedBuildConfiguration>
+    <LastUsedPlatform>Any CPU</LastUsedPlatform>
+    <SiteUrlToLaunchAfterPublish />
+    <LaunchSiteAfterPublish>True</LaunchSiteAfterPublish>
+    <ExcludeApp_Data>False</ExcludeApp_Data>
+<!-- In the line below replace MyNetworkUserName with your WSU network username -->
+    <publishUrl>\\winona.edu\dfs\Students\ClassStorage\20205000036\MyNetworkUserName\</publishUrl>
+    <DeleteExistingFiles>False</DeleteExistingFiles>
+    <!-- no need to place .git files on classes.winona.edu; PgP 8/20/2018 -->
+    <ExcludeFoldersFromDeployment>.git</ExcludeFoldersFromDeployment>
+    <!-- 
+    consider not deploying certain files shown below.  Not activated yet because must be tested.
+    Professor probably cannot do this in eprof1 master repo, but eprofessor repo?  PgP 8/20/2018
+    <ExcludeFilesFromDeployment>ReadMe.md;.gitattributes;.gitignore</ExcludeFilesFromDeployment>
+    -->
+  </PropertyGroup>
+</Project>
