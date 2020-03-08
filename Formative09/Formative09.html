@@ -2,254 +2,250 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap -->
-    <link href="../../ReadOnly/bootstrap.css" rel="stylesheet">
+	<!-- Bootstrap -->
+	<link href="../../ReadOnly/bootstrap.css" rel="stylesheet">
 
-    <!-- constant file to update email, firstname, lastname, starid, section on students' pages -->
-    <script src="../constants.js"></script>
-    <script src="../../ReadOnly/CourseConstants.js"></script>
+	<!-- constant file to update email, firstname, lastname, starid, section on students' pages -->
+	<script src="../constants.js"></script>
+	<script src="../../ReadOnly/CourseConstants.js"></script>
 
-    <!-- model assignment file, version 1 released 2018/02/18 PgP -->
+	<!-- model assignment file, version 1 released 2018/02/18 PgP -->
 
-    <title>MIS362 Formative09</title>
+	<title>MIS362 Formative09</title>
 </head>
 
 <body onload="setVariables()">
 
-    <form class="container-fluid" action="https://eprofessor.azurewebsites.net/code/ProcessFormData.asp" method="post" name="frmAssignment" id="frmAssignment">
-        <input name="InstID" id="InstID" value="00617282" type="hidden">
+	<form class="container-fluid" action="https://eprofessor.azurewebsites.net/code/ProcessFormData.asp" method="post" name="frmAssignment" id="frmAssignment">
+		<input name="InstID" id="InstID" value="00617282" type="hidden">
 
-        <h1 class=" text-center">xLookup()</h1>
+		<h1 class=" text-center">XLOOKUP()</h1>
 
-        <!-- -start-Student, class and assignment information. Assignment hard-coded, other values from constants.js file-start -->
-        <div class="row col-lg-12">
-            <div class="col-lg-3">
-                <label class="text-primary" for="FirstName">First Name:</label>
-                <input class="form-control" name="FirstName" id="FirstName" type="text" value="default first name" readonly="readonly">
-            </div>
-            <div class="col-lg-3">
-                <label class="text-primary" for="LastName">Last Name:</label>
-                <input class="form-control" name="LastName" id="LastName" type="text" value="default last name" readonly="readonly">
-            </div>
-            <div class="col-lg-3">
-                <label class="text-primary" for="pin">StarID:</label>
-                <input class="form-control" name="pin" id="pin" type="text" value="default StarID" readonly="readonly">
-            </div>
-            <div class="col-lg-3">
-                <label class="text-primary" for="email">Email:</label>
-                <input class="form-control" name="email" id="email" type="email" value="default email address" readonly="readonly">
-            </div>
-        </div>
+		<!-- -start-Student, class and assignment information. Assignment hard-coded, other values from constants.js file-start -->
+		<div class="row col-lg-12">
+			<div class="col-lg-3">
+				<label class="text-primary" for="FirstName">First Name:</label>
+				<input class="form-control" name="FirstName" id="FirstName" type="text" value="default first name" readonly="readonly">
+			</div>
+			<div class="col-lg-3">
+				<label class="text-primary" for="LastName">Last Name:</label>
+				<input class="form-control" name="LastName" id="LastName" type="text" value="default last name" readonly="readonly">
+			</div>
+			<div class="col-lg-3">
+				<label class="text-primary" for="pin">StarID:</label>
+				<input class="form-control" name="pin" id="pin" type="text" value="default StarID" readonly="readonly">
+			</div>
+			<div class="col-lg-3">
+				<label class="text-primary" for="email">Email:</label>
+				<input class="form-control" name="email" id="email" type="email" value="default email address" readonly="readonly">
+			</div>
+		</div>
 
-        <div class="row col-lg-12">
-            <div class="col-lg-3">
-                <label class="text-primary" for="semester">Semester:</label>
-                <input class="form-control" name="semester" id="semester" type="text" value="default" readonly="readonly">
-            </div>
-            <div class="col-lg-3">
-                <label class="text-primary" for="class">Class:</label>
-                <input class="form-control" name="class" id="class" value="xClass" type="text" readonly="readonly">
-            </div>
-            <div class="col-lg-3">
-                <label class="text-primary" for="section">Section:</label>
-                <input class="form-control" name="section" id="section" value="default" type="text" readonly="readonly">
-            </div>
-            <div class="col-lg-3">
-                <label class="text-primary" for="assignment">Assignment:</label>
-                <input class="form-control" name="assignment" id="assignment" value="Formative09" type="text" readonly="readonly">
-            </div>
-        </div>
-        <!-- -end-Student, class and assignment information-end -->
+		<div class="row col-lg-12">
+			<div class="col-lg-3">
+				<label class="text-primary" for="semester">Semester:</label>
+				<input class="form-control" name="semester" id="semester" type="text" value="default" readonly="readonly">
+			</div>
+			<div class="col-lg-3">
+				<label class="text-primary" for="class">Class:</label>
+				<input class="form-control" name="class" id="class" value="xClass" type="text" readonly="readonly">
+			</div>
+			<div class="col-lg-3">
+				<label class="text-primary" for="section">Section:</label>
+				<input class="form-control" name="section" id="section" value="default" type="text" readonly="readonly">
+			</div>
+			<div class="col-lg-3">
+				<label class="text-primary" for="assignment">Assignment:</label>
+				<input class="form-control" name="assignment" id="assignment" value="Formative09" type="text" readonly="readonly">
+			</div>
+		</div>
+		<!-- -end-Student, class and assignment information-end -->
 
-        <!-- Calculate the correct path for saving the files -->
-        <script>Path = "&#92;OneDrive - MNSCU&#92;" + xClass + "&#92;" + document.getElementById("assignment").value + "&#92;"; </script>
+		<!-- Calculate the correct path for saving the files -->
+		<script>Path = "&#92;OneDrive - MNSCU&#92;" + xClass + "&#92;" + document.getElementById("assignment").value + "&#92;"; </script>
 
 
-        <div class="col-lg-12">
-            <br />
-            <input class="text-danger btn-block btn-lg" name="Submit" value="Submit" type="submit">
-            <br />
-        </div>
+		<div class="col-lg-12">
+			<br />
+			<input class="text-danger btn-block btn-lg" name="Submit" value="Submit" type="submit">
+			<br />
+		</div>
 
-        <div class="col-lg-12 h3 text-danger">
-            160 Points
+		<div class="col-lg-12 h3 text-danger">
+			160 Points
             <hr />
-        </div>
+		</div>
 
-        <!-- -start-objectives-start -->
-        <div class="col-lg-12"><a href="#Objectives" class="btn btn-info" data-toggle="collapse">Learning Objectives</a></div>
-        <div id="Objectives" class=" collapse in col-lg-12">
+		<!-- -start-objectives-start -->
+		<div class="col-lg-12"><a href="#Objectives" class="btn btn-info" data-toggle="collapse">Learning Objectives</a></div>
+		<div id="Objectives" class=" collapse in col-lg-12">
 
-            <!--Above this line similar except for Assignment number and title   -->
-
-
-
-            <p>After completing this assignment you will be familiar with:</p>
-            <ul>
-                <li>XLookup Function</li>
-            </ul>
-            <hr />
+			<!--Above this line similar except for Assignment number and title   -->
 
 
 
-        </div>
+			<p>After completing this assignment you will be familiar with:</p>
+			<ul>
+				<li>XLookup Function</li>
+			</ul>
+			<hr />
 
-        <div class="col-lg-12"><a href="#Overview" class="btn btn-info" data-toggle="collapse">Assignment Overview</a></div>
-
-        <div id="Overview" class="collapse in  col-lg-12">
 
 
+		</div>
 
-            <p>Note:  Save this  assignment to your website.</p>
-            <p>
-                The purpose of this assignment is to consider the application of the new XLookup() function to businesses and organizations.
+		<div class="col-lg-12"><a href="#Overview" class="btn btn-info" data-toggle="collapse">Assignment Overview</a></div>
+
+		<div id="Overview" class="collapse in  col-lg-12">
+
+
+
+			<p>Note:  Save this  assignment to your website.</p>
+			<p>
+				The purpose of this assignment is to consider the application of the new XLookup() function to businesses and organizations.
                 <br />
-            </p>
-            <ul>
-                <li>Business Intelligence</li>
-                <li>Business Analytics</li>
-            </ul>
+			</p>
+			<ul>
+				<li>Business Intelligence</li>
+				<li>Business Analytics</li>
+			</ul>
 			<p>This exercise will investigate some of the current issues.</p>
-            <hr />
-        </div>
-
-        <div class=" col-lg-12"><a href="#Exercise01" class="btn btn-info" data-toggle="collapse">Exercise 1-XLookup</a></div>
-
-        <div id="Exercise01" class="collapse in  col-lg-12">
-
-            <p>You have been assigned the task of determing the last date a gift card was used.</p>
-            <p>Where to begin?</p>
-            <p>Instead of manually searching the spreadsheet, use the new Excel XLookup() function, which is an improvement on VLookup().</p>
-            <ol>
-                <li><br />
-                    <br />
-
-                </li>
-
-            </ol>
-
-            <!--  PgP 2/4/2018 create path using constants and current document assignment -->
-            <hr />
-
-        </div>
+			<hr />
+		</div>
 
 
 
+		<div class=" col-lg-12"><a href="#Exercise01" class="btn btn-info" data-toggle="collapse">Exercise 1-XLookup</a></div>
 
-        <div class=" col-lg-12"><a href="#Exercise02" class="btn btn-info" data-toggle="collapse">Exercise 2-Roll the Dice</a></div>
-
-        <div id="Exercise02" class="collapse in  col-lg-12">
-
-
-            <p>
-                Use your knowledge of Python 3 to complete the program below, which simulates the roll of a dice, with possible values of 1 through 6. 
-                <br />
-                Replace '#statement here' with an appropriate Python statement.  The first statement has already been entered.<br />
-                Use the included references to determine the appropriate Python statement.<br />
-                Feel free to use other appropriate Python 3.x references.<br />
-                This programs shows one way to simulate the rolling of a dice.
-            </p>
+		<div id="Exercise01" class="collapse in  col-lg-12">
+			Download <a href="xLookup.xlsx" class="bg-info text-white">this Excel file</a>, and save it as 
+     &quot;Formative09&quot; in your ' 
+            <code><span id="bPath"></span></code>
+			<script>document.getElementById("bPath").innerHTML = Path; </script>
+			' folder.<br />
 
 
-            <p>
-                &nbsp;</p>
+			<p>You have been assigned the task of determing the last date certain gift cards were used.</p>
+			<p>Where to begin?</p>
 
-            <p>
-                Copy the code from <a href="DiceRoll/DiceRoll.txt" class="bg-info text-white" target="_blank">DiceRoll.txt</a> into a new Python application in the Visual Studio IDE.<br />
-                Note that the first task has already been done, the variable 'sides' has been created.<br />
-                Make use of the Visual Studio IDE, and the included references to fill in the missing statements.
+			<p>Review this <a href="https://www.linkedin.com/learning/excel-tracking-data-easily-and-efficiently/xlookup-the-newest-function-in-office-365" class="bg-info text-white" target="_blank">LinkedIn Learning video on Xlookup()</a></p>
+			<p>Instead of manually searching the spreadsheet, use the new <a href="https://support.office.com/en-us/article/xlookup-function-b7fd680e-6d10-43e6-84f9-88eae8bf5929" class="bg-info text-white" target="_blank">Excel XLookup() function</a>, which is an improvement on VLookup().</p>
+			<hr />
 
-            </p>
-
-            <p>
-                (10) 2.  Write the statement that you used to initialize the While loop.<br />
-            </p>
-            <!-- Enter your answer in the VALUE field below   GROK -->
-            <input name="q2" id="q2" size="120" maxlength="120" class="form-control" value="Enter your brief answer here" type="text">
-            <br />
-            <br />
+		</div>
 
 
-            <hr />
-
-        </div>
 
 
-        <!--  From here to end difference question numbers and Summative numbering for PDF of file uploaded to D2L    -->
+		<div class=" col-lg-12"><a href="#Exercise02" class="btn btn-info" data-toggle="collapse">Exercise 2-Last Used Date</a></div>
+
+		<div id="Exercise02" class="collapse in  col-lg-12">
 
 
-        <div class="col-lg-12"><a href="#ExercisePDF" class="btn btn-info" data-toggle="collapse">Exercise-D2L Assignment Submission</a></div>
+			<p>
+				Use your knowledge of Xlookup() to determine the last date the following gift cards were used. 
+			</p>
 
-        <div id="ExercisePDF" class="collapse in  col-lg-12">
 
-            <p>
-                Save your file 'Formative09.xlsx' to your '
+			<p>
+				(45) 1.  Write the most recent date that the gift card was used.<br />
+			</p>
+			<!-- Enter your answer in the VALUE field below   GROK -->
+			<input name="q1" id="q1" size="120" maxlength="120" class="form-control" value="most recent date used" type="text">
+			<br />
+
+
+			<hr />
+
+			<p>
+				(45) 2.  Write the most recent date that the gift card was used.<br />
+			</p>
+			<!-- Enter your answer in the VALUE field below   GROK -->
+			<input name="q2" id="q2" size="120" maxlength="120" class="form-control" value="most recent date used" type="text">
+			<br />
+			<br />
+
+
+			<hr />
+
+		</div>
+
+
+		<!--  From here to end difference question numbers and Summative numbering for PDF of file uploaded to D2L    -->
+
+
+		<div class="col-lg-12"><a href="#ExercisePDF" class="btn btn-info" data-toggle="collapse">Exercise-D2L Assignment Submission</a></div>
+
+		<div id="ExercisePDF" class="collapse in  col-lg-12">
+
+			<p>
+				Save your file 'Formative09.xlsx' to your '
           <code><span id="ePath"></span></code>
-                <script>document.getElementById("ePath").innerHTML = Path; </script>
-                ' folder.<br />
-            </p>
+				<script>document.getElementById("ePath").innerHTML = Path; </script>
+				' folder.<br />
+			</p>
 
 
-            <p>(50) 9. Upload your completed file 'Formative09.xlsx' to the D2L 'Formative09' Assignment folder.</p>
-        </div>
+			<p>(50) 3. Upload your completed file 'Formative09.xlsx' to the D2L 'Formative09' Assignment folder.</p>
+		</div>
 
-        <div class="col-lg-12 text-danger">
-            <h2>Formative09.xlsx</h2>
-            <hr />
+		<div class="col-lg-12 text-danger">
+			<h2>Formative09.xlsx</h2>
+			<hr />
 
-        </div>
-
-
+		</div>
 
 
 
-        <div class="col-lg-12"><a href="#ExerciseAssignmentSubmission" class="btn btn-info" data-toggle="collapse">Exercise-Assignment Submission</a></div>
 
-        <div id="ExerciseAssignmentSubmission" class="collapse in  col-lg-12">
-            <p>
-                Use a browser to view your completed and published website at: https://classes.winona.edu/...     
+
+		<div class="col-lg-12"><a href="#ExerciseAssignmentSubmission" class="btn btn-info" data-toggle="collapse">Exercise-Assignment Submission</a></div>
+
+		<div id="ExerciseAssignmentSubmission" class="collapse in  col-lg-12">
+			<p>
+				Use a browser to view your completed and published website at: https://classes.winona.edu/...     
                 <br />
-                Ensure that you have linked this assignment on your home page.
+				Ensure that you have linked this assignment on your home page.
                 Note that your screen shots do not have to be completed to perform this step.<br />
-            </p>
+			</p>
 
-            (10) 10. Home Page Hyperlink<br />
-            Check and verify that this assignment is hyperlinked on your home page.<br />
-            <br />
+			(10) 4. Home Page Hyperlink<br />
+			Check and verify that this assignment is hyperlinked on your home page.<br />
+			<br />
 
-            (10) 11. Assignment submission<br />
-            Press the Submit button at the top or bottom of this page.
+			(10) 5. Assignment submission<br />
+			Press the Submit button at the top or bottom of this page.
                 Read and follow instructions on the confirmation page.&nbsp; Correct any errors.
-        </div>
-        <hr />
+		</div>
+		<hr />
 
 
 
 
-        <div class="col-lg-12">
-            <br />
-            <input class="text-danger btn-block btn-lg" name="Submit" value="Submit" type="submit">
-            <br />
-        </div>
+		<div class="col-lg-12">
+			<br />
+			<input class="text-danger btn-block btn-lg" name="Submit" value="Submit" type="submit">
+			<br />
+		</div>
 
 
-    </form>
+	</form>
 
 
 
-    <!-- Creative Commons License Info -->
-    <div id="xLicense" class=" col-lg-12 text-muted"></div>
+	<!-- Creative Commons License Info -->
+	<div id="xLicense" class=" col-lg-12 text-muted"></div>
 
-    <div id="xfooter" class=" col-lg-12 text-muted"></div>
+	<div id="xfooter" class=" col-lg-12 text-muted"></div>
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="../../ReadOnly/jquery-1.js"></script>
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="../../ReadOnly/jquery-1.js"></script>
 
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="../../ReadOnly/bootstrap.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="../../ReadOnly/bootstrap.js"></script>
 
 </body>
 </html>
