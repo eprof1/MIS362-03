@@ -23,36 +23,45 @@
 		<script>document.getElementById("xHeading").innerHTML = pageHeading; </script>
 	</div>
 
+	<div class="col-lg-12">
 
-	<form class="container-fluid" action="https://eprofessor.azurewebsites.net/code/grading/CourseAssignmentSubmissions.asp" method="post" name="frmAssignment" id="frmAssignment">
+		<form class="container-fluid col-lg-4" action="https://eprofessor.azurewebsites.net/code/grading/CourseAssignmentSubmissions.asp" method="post" name="frmAssignment" id="frmAssignment">
 
+			<!-- -start-Student, class and assignment information. Assignment hard-coded, other values from constants.js file-start -->
 
-		<!-- -start-Student, class and assignment information. Assignment hard-coded, other values from constants.js file-start -->
+			<input class="form-control" name="FirstName" id="FirstName" type="hidden" value="default first name">
+			<input class="form-control" name="LastName" id="LastName" type="hidden" value="default last name">
+			<input class="form-control" name="pin" id="pin" type="hidden" value="default StarID">
+			<input class="form-control" name="email" id="email" type="hidden" value="default email address">
+			<input class="form-control" name="semester" id="semester" type="hidden" value="default">
+			<input class="form-control" name="class" id="class" value="xClass" type="hidden">
+			<input class="form-control" name="section" id="section" value="default" type="hidden">
+			<input class="form-control" name="assignment" id="assignment" value="Attendance" type="hidden">
+			<input name="InstID" id="InstID" value="00617282" type="hidden">
 
-		<input class="form-control" name="FirstName" id="FirstName" type="hidden" value="default first name">
-		<input class="form-control" name="LastName" id="LastName" type="hidden" value="default last name">
-		<input class="form-control" name="pin" id="pin" type="hidden" value="default StarID">
-		<input class="form-control" name="email" id="email" type="hidden" value="default email address">
-		<input class="form-control" name="semester" id="semester" type="hidden" value="default">
-		<input class="form-control" name="class" id="class" value="xClass" type="hidden">
-		<input class="form-control" name="section" id="section" value="default" type="hidden">
-		<input class="form-control" name="assignment" id="assignment" value="Attendance" type="hidden">
-		<input name="InstID" id="InstID" value="00617282" type="hidden">
+			<!-- -end-Student, class and assignment information-end -->
 
-		<!-- -end-Student, class and assignment information-end -->
-
-
-		<div class="col-lg-12">
-			<br />
 			<input class="text-danger btn-block btn-lg" name="Submit" value="Run Assignment Submissions Report" type="submit">
+			<br />
+		</form>
+
+
+		<div class="text-center">
+			<!-- PgP 3/2/2020 below is  Java Script generated mail to link -->
+			<div id="emailStudent"></div>
+			<script>document.getElementById("emailStudent").innerHTML = xMailTo</script>
 			<br />
 		</div>
 
-	</form>
+		<hr />
+
+	</div>
+
+
 
 	<div class="col-lg-12 h3">
 		<a href="https://eprofessor.azurewebsites.net/MIS362O/default.asp" class="bg-info text-white" target="_blank">Syllabus</a>
-        &nbsp; &nbsp;
+		&nbsp; &nbsp;
         <a href="https://winona.learn.minnstate.edu/d2l/le/content/5716931/viewContent/52519709/View" class="bg-info text-white" target="_blank">MindTap Book</a>
 	</div>
 
@@ -99,7 +108,7 @@
 				<td><a href="Formative03/Formative03.html">Formative03</a></td>
 				<td><a href="Summative03/Summative03.html">Summative03</a></td>
 				<td><a href="Project03/Project3Mentor.html">Project03-Mentor</a><br />
-                    <a href="Project04/LinkedInCertificate.png">Project04-IoT01</a></td>
+					<a href="Project04/LinkedInCertificate.png">Project04-IoT01</a></td>
 				<td>&nbsp;</td>
 			</tr>
 			<tr>
@@ -153,7 +162,7 @@
 				<td><a href="Formative07/Formative07.html">Formative07</a></td>
 				<td><a href="Summative07/Summative07.html">Summative07</a></td>
 				<td><a href="https://eprofessor.azurewebsites.net/MIS362O/Project03/default.asp#MentorEmail" class="bg-info text-white" target="_blank">Project03-Email</a>-cc email to professor<br />
-                    <a href="Project04/LinkedInCertificate.png">Project04-IoT05</a></td>
+					<a href="Project04/LinkedInCertificate.png">Project04-IoT05</a></td>
 				<td>&nbsp;</td>
 			</tr>
 			<tr>
