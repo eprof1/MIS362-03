@@ -1,4 +1,7 @@
 # MIS362-03 BUSO, online
+PgP 2/21/2022
+* This repository will also be used for summer 2022 version on course which is online
+
 PgP 12/18/2021
 * This repository contains all files and assignments for Winona State University MIS 362 BUSO online, Management Information Systems class for the spring of 2022.
 
