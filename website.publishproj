@@ -18,7 +18,7 @@ Copyright (C) Microsoft Corporation. All rights reserved.
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{d4ae3b15-ecef-4bd3-aa49-2431f964285a}</ProjectGuid>
     <SourceWebPhysicalPath>$(MSBuildThisFileDirectory)</SourceWebPhysicalPath>
-    <SourceWebVirtualPath>/MIS362-03_UseCarefully</SourceWebVirtualPath>
+    <SourceWebVirtualPath>/MIS362-03_BUSO</SourceWebVirtualPath>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <SourceWebProject>
     </SourceWebProject>
