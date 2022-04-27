@@ -1,4 +1,5 @@
-﻿<!doctype html>
+﻿
+<!doctype html>
 <html lang="en">
 
 <head>
@@ -6,20 +7,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Formative00</title>
-
     <!-- Bootstrap -->
-    <link href="../../ReadOnly/bootstrap.css" rel="stylesheet">
+    <link href="bootstrap.css" rel="stylesheet">
 
     <!-- constant file to update email, firstname, lastname, starid, section on students' pages -->
-    <script src="../constants.js"></script>
-    <script src="../../ReadOnly/CourseConstants.js"></script>
+    <script src="Constants.js"></script>
 </head>
 
-<body onload="setVariables()" style="background-color: lightgreen">
+<body onload="setVariables()" style="background-color:lightgoldenrodyellow" >
     <form class="container-fluid" action="https://eprofessor.azurewebsites.net/code/ProcessFormData.asp" method="post" name="frmAssignment" id="frmAssignment">
 
         <input name="InstID" type="hidden" id="InstID" value="00617282">
-        <h1 class="text-center">Basic Digital Technologies</h1>
+        <h1 class="text-center">Basic Course Technologies-MAC Version</h1>
 
 
         <div class="row col-lg-12">
@@ -48,11 +47,11 @@
             </div>
             <div class="col-lg-3">
                 <label class="text-primary" for="class">Class:</label>
-                <input class="form-control" name="class" id="class" value="MIS362" type="text">
+                <input class="form-control" name="class" id="class" value="MIS362" type="text" readonly="readonly">
             </div>
             <div class="col-lg-3">
                 <label class="text-primary" for="section">Section:</label>
-                <input class="form-control" name="section" id="section" value="MySection" type="text">
+                <input class="form-control" name="section" id="section" value="01" type="text" readonly="readonly">
             </div>
             <div class="col-lg-3">
                 <label class="text-primary" for="assignment">Assignment:</label>
@@ -63,22 +62,14 @@
 
         <div class="col-lg-12">
             <br />
-            <input class=" text-danger btn-block btn-lg" type="submit" name="Submit" value="SUBMIT"><br />
+            <input class=" text-danger btn-block btn-lg" type="submit" name="Submit" value="SUBMIT -once you have entered your first name, last name, StarID, email, class and section- SUBMIT"><br />
         </div>
 
         <div class="h3 text-danger">
-            110 Points<hr />
+            120 Points<hr />
         </div>
 
-        <div class="text-danger">
-            <strong>Note:
-                <br />
-                Exercises 2 and 3 are optional, they do not have to be done, and are included for information.<br />
-                PgP 12/18/2021
-            </strong>
-            <br />
-            <hr />
-        </div>
+
 
 
         <div class="col-lg-12"><a href="#Objectives" class="btn btn-info" data-toggle="collapse">Learning Objectives</a></div>
@@ -90,11 +81,11 @@
             <p>After completing this assignment you will be able to:</p>
             <ol>
                 <li>Create purposeful folder structures</li>
-                <li>Create and annotate screen shots using the <a href="https://learn.winona.edu/wiki/Snipping_Tool" class="bg-info text-white" target="_blank">Snipping Tool</a> or <a href="SnipSketch.png" target="_blank" class="bg-info text-white">Snip &amp; Sketch</a></li>
+                <li>Create and annotate screen shots using key combinations Cmd + Shift + 4, or Cmd + Shift + 3; </li>
                 <li>Check the operational status of your computer, and perform bios and software updates</li>
                 <li>Connect and configure multiple external monitors</li>
-                <li>Perform various <a href="https://learn.winona.edu/wiki/Control_Panel_Installations_(PC)" target="_blank" class="bg-info text-white">software installations</a></li>
-                <li>Install, configure and log into an Adobe Connect web conference</li>
+                <li>Perform various <a href="https://learn.winona.edu/wiki/Managed_Software_Center" target="_blank" class="bg-info text-white">software installations</a></li>
+                <li>Install, configure and log into a Zoom web conference</li>
                 <li>Subscribe to D2L course calendar feeds using the Microsoft Outlook desktop client</li>
                 <li>Connect to the WSU network from off-campus using Virtual Private Network-VPN, technology</li>
                 <li>Subscribe to curated business sources</li>
@@ -118,7 +109,7 @@
                 refer to the <a href="https://learn.winona.edu/wiki/WSU_Technology_Knowledge_Base" class="bg-info text-white" target="_blank">WSU Technology Knowledge Base</a>,&nbsp; ask a teaching assistant, or ask the instructor:
             </p>
             <ol>
-                <li>Microsoft Windows 10 (need Print to PDF and other features-if not you must figure out work arounds)</li>
+                <li>OS X version recommended by WSU ITS Department (need Print to PDF and other features-if not you must figure out work arounds)</li>
                 <li>Set your primary email address to Winona State University.
                                         <ol>
                                             <li>Go to the <a href="https://starid.minnstate.edu/" class="bg-info text-white" target="_blank">StarID self-service site</a></li>
@@ -134,17 +125,17 @@
                                             </li>
                                         </ol>
                 </li>
-                <li>Have the <a href="https://learn.winona.edu/wiki/Microsoft_Outlook" class="bg-info text-white" target="_blank">Outlook Desktop Client installed</a> and configured on your laptop.</li>
-                <li>Install and configure <a href="https://learn.winona.edu/wiki/Microsoft_OneDrive" class="bg-info text-white" target="_blank">One Drive for Business. </a>
+                <li>Have the <a href="https://learn.winona.edu/wiki/Setting_Up_Microsoft_Outlook_2016" class="bg-info text-white" target="_blank">Outlook Desktop Client installed</a> and configured on your laptop.</li>
+                <li>Install and configure <a href="https://learn.winona.edu/wiki/Microsoft_Office_365" class="bg-info text-white" target="_blank">One Drive for Business. </a>
                     <br />
                     Your username is: <code>StarID@go.minnstate.edu </code>
                     <br />
-                    If you encounter problems, search online for, and install the latest version of &quot;<a href="Office365RecoveryAssistant.PNG" class="bg-info text-white" target="_blank">Microsoft Support and Recovery Assistant for Office 365</a>&quot;<br />
+                    If you encounter problems, search online for, and install the latest version of &quot;<a href="Office365RecoveryAssistant.PNG" class="bg-info text-white" target="_blank">Microsoft Support and Recovery Assistant for Office 365</a>&quot; or Mac Equivalent<br />
                     Again, login using your <a href="Office365RecoveryAssistantSignIn.PNG" class="bg-info text-white" target="_blank">StarID@go.minnstate.edu</a>
                     <br />
                     See Tech Support in Somsen 207 if you still have problems. </li>
-                <li>Log into your <a href="https://www.linkedin.com/learning" class="bg-info text-white" target="_blank">LinkedIn Learning account.</a>     <a href="https://learn.winona.edu/wiki/LinkedIn_Learning" class="bg-info text-white" target="_blank">(More info here)</a></li>
-                <li><a href="https://www.linkedin.com/learning/windows-10-creators-update-essential-training-2017/browsing-through-folders" class="bg-info text-white" target="_blank">File Explorer</a>-to create and modify files and folders.</li>
+                <li>Log into your <a href="https://www.linkedin.com/learning" class="bg-info text-white" target="_blank">LinkedIn Learning account.</a>     <a href="https://learn.winona.edu/LinkedIn_Learning" class="bg-info text-white" target="_blank"> (More info here)</a></li>
+                <li><a href="https://support.apple.com/en-us/HT201732" class="bg-info text-white" target="_blank">Finder</a>-to create and modify files and folders.-also see LinkedIn Learning</li>
                 <li><a href="https://www.linkedin.com/learning/windows-10-creators-update-essential-training-2017/browsing-through-folders" class="bg-info text-white" target="_blank">Libraries</a>-to organize your work into virtual folders.</li>
                 <li>Context sensitive shortcut menus are activated by <a href="https://www.linkedin.com/learning/computer-literacy-for-windows-10/understand-the-right-click" class="bg-info text-white" target="_blank">right-clicking</a> various objects in a window.</li>
                 <li>Tool bars, menu bars, status bars can be turned on and off using context sensitive menus.</li>
@@ -153,12 +144,11 @@
                     <abbr title="Search LinkedIn Learning for 'Keyboard shortcuts for organizing and navigating' ">shortcuts </abbr>
                 </a>, these will often work even when the menu options will not-
               <ol>
-                  <li>Ctrl+A to select All</li>
-                  <li>Ctrl+C to Copy</li>
-                  <li>Ctrl+V to Paste</li>
-                  <li>Ctrl+Z to Undo</li>
-                  <li>Windows+L to lock screen</li>
-                  <li><a href="WindowsKey.jpg" class="bg-info text-white" target="_blank">Windows Key</a></li>
+                  <li>Cmd+A to select All</li>
+                  <li>Cmd+C to Copy</li>
+                  <li>Cmd+V to Paste</li>
+                  <li>Cmd+Z to Undo</li>
+                  <li>Cmd+Ctrl+Q to lock screen</li>
               </ol>
                 </li>
 
@@ -210,7 +200,7 @@
         </div>
 
 
-        <div class="col-lg-12"><a href="#Exercise01" class="btn btn-info" data-toggle="collapse">Exercise 1-File Explorer or Finder</a></div>
+        <div class="col-lg-12"><a href="#Exercise01" class="btn btn-info" data-toggle="collapse">Exercise 1-Finder</a></div>
 
         <div id="Exercise01" class="collapse in  col-lg-12">
             <p>
@@ -218,11 +208,10 @@
                 You will use OneDrive to do this.<br />
                 If you do not have OneDrive installed and configured, before proceeding, refer to the resources in the Assignment Overview above.<br />
                 Some of your work will be stored on your laptop, such as screen shots to prove that you have accomplished certain tasks.<br />
-                During this course you will use File Explorer to create a series of folders in OneDrive with paths such as: ' <code><span id="xpath"></span></code>'
+                During this course you will use File Explorer to create a series of folders in OneDrive with paths such as: ' <code><span id="xpath"></span></code> '
                 <script>document.getElementById("xPath").innerHTML = "OneDrive - MNSCU&#92;" + document.getElementById("class").value + "&#92;" + document.getElementById("assignment").value;;</script>
                 <br />
-                OneDrive will look like the image below, but with the appropriate course:  
-				<br />
+                OneDrive will look somewhat like the image below, but with the appropriate course:   <br />
 
                 <a href="OneDriveFolder.PNG" class="img-responsive img-rounded" target="popup" onclick="window.open('OneDriveFolder.PNG', 'popup'); return false;">
                     <img src="OneDriveFolder.PNG" width="300" alt="One Drive" class="img-responsive img-responsive" /></a> OneDrive Folder<br />
@@ -234,7 +223,7 @@
 
             <div class="text-primary">
                 <p>
-                    (10) 1. Use the Snipping Tool to make a screen shot of  the folder that you just created in File Explorer.
+                    (10) 1. Make a screen shot of  the folder that you just created in Finder.
                     <br />
 
                     <!--  PgP 2/4/2018 create path using constants and current document assignment -->
@@ -257,7 +246,7 @@
 
 
 
-        <div class="col-lg-12"><a href="#Exercise02" class="btn btn-info" data-toggle="collapse">Exercise 2-PC Software Updates, Hardware Check-OPTIONAL</a></div>
+        <div class="col-lg-12"><a href="#Exercise02" class="btn btn-info" data-toggle="collapse">Exercise 2-Software Updates, Hardware Check</a></div>
 
         <div id="Exercise02" class="collapse in  col-lg-12">
             <p>
@@ -266,37 +255,19 @@
                 <br />
             </p>
             <ol>
-                <li>Click the &#39;Start&#39; button, type <code>&#39;Install a program from the network&#39;</code>, press the &#39;Enter&#39; key and from the list of programs select &#39;Update HP Drivers and Firmware&#39;</li>
-                <li>After installation, run the program-it will update your computer bios, drivers and firmware.&nbsp; Then reboot.&nbsp; Depending on how much updating is required, this could take some time.</li>
-                <li>After your computer has restarted, click Start, type in <code>HP PC Hardware</code><br />
-                    Note: if not found, or to install latest version, visit this website to download:  <a href="https://www8.hp.com/us/en/campaigns/hpsupportassistant/pc-diags.html" target="_blank" class="bg-info text-white">HP Hardware Diagnostics </a>
-                    <br />
+                <li>Do a software update.
                 </li>
-                <li>Press Enter
-                </li>
-                <li>Select 'System Tests', 'System Fast Test', then click 'Run Once'
-                </li>
-                <li>A series of tests will check your hardware performance.<br />
-                    <span class="alert-danger">If any test fails, go to tech support in Somsen 207 for assistance in resolving the problem.</span>
+                <li><span class="alert-danger">If your laptop does not seem to be running correctly, go to tech support in Somsen 207 for assistance in resolving the problem.</span>
                 </li>
             </ol>
 
             <p>
-                <a href="HPDiag_1_5_8.PNG" class="img-responsive img-rounded" target="popup" onclick="window.open('HPDiag_1_5_8.PNG', 'popup'); return false;">
-                    <img src="HPDiag_1_5_8.PNG" class="img-responsive img-rounded" alt="HP PC diagnostics" width="300" /></a>
-                <span class="text-center">HP PC Hardware application interface</span><br />
-            </p>
-
-            <p>
-                Note- other in-depth testing and computer information is available using the <a href="HPSupportAssistant.PNG" target="_blank" class="bg-info text-white">HP Support Assistant</a>.
-            </p>
-            <p>
-                Do not forget to check <a href="SoftwareCenter.PNG" target="_blank" class="bg-info text-white">Software Center </a>(Start, type &#39;Software Center&#39;) for the latest Windows and other updates.
+                Note- other in-depth testing and computer information may be available from tech support.
             </p>
 
             <div class="text-primary">
                 <p>
-                    Optional- 2. Use the Snipping Tool to make a screen shot of  the 'HP PC Hardware Diagnostics Window' showing that your laptop 'Passed' ALL tests.
+                    (10) 2. Make a screen shot of  the 'Mac Software Update' window showing that your system is up to date.
                     <br />
 
                     <!--  PgP 2/4/2018 create path using constants and current document assignment -->
@@ -326,11 +297,11 @@
         <div class=" col-lg-12"><a href="#Exercise03" class="btn btn-info" data-toggle="collapse">Exercise 3-Multiple Monitors-OPTIONAL</a></div>
 
         <div id="Exercise03" class="collapse in  col-lg-12">
+            <p>PgP 4/26/2022-For Informational Purposes</p>
             <p>Note: you are welcome to use the multiple monitors in Somsen 301 or Somsen 329 whenever the rooms are available.</p>
             <p>
-                Your HP Elitebook x360 laptop can support two external monitors through HDMI and DisplayPort cables;
-                <br />
-                or by using a USB-C Dock<br />
+                The MacBook Pro laptop can support two external monitors by using a CalDigit TS3+ USB-C Dock<br />
+                There are four of these located in the last aisle, furthest from the classroom door.<br />
                 Why are additional screens necessary?  Some reasons:
             </p>
             <ul>
@@ -390,9 +361,9 @@
 
             <div class="text-primary">
                 <p>
-                    OPTIONAL-  3. Make sure that you have content displayed in all three monitors. You can have a different website visible on each monitor.
+                    (10) 3. Make sure that you have content displayed in all three monitors. You can have a different website visible on each monitor.
                         <br />
-                    Then use the Snipping Tool to make a screen shot of all three monitors.<br />
+                    Then Make a screen shot of all three monitors.<br />
                     <p>
                         Save the screen shot  as &quot;Ex3&quot; in your ' <code><span id="cPath"></span></code>
                         <script>document.getElementById("cPath").innerHTML = "OneDrive - MNSCU&#92;" + document.getElementById("class").value + "&#92;" + document.getElementById("assignment").value;; </script>
@@ -409,39 +380,27 @@
 
         <div class="col-lg-12"><a href="#Exercise04" class="btn btn-info" data-toggle="collapse">Exercise 4-Software Installation</a></div>
         <div id="Exercise04" class="collapse in  col-lg-12">
-            <p>
-                Install the following software onto your computer.
-				<br />
-            </p>
+            <p>Install the following software onto your computer</p>
             <ol>
-
-
-                <li>Macs-Software to handle PDF files is already installed.  Use Google for assistance.<br />
-                    PCs-Install PDFill, but select only &quot;FREE PDFill PDF Tools (No Watermark)&quot; option
-                    <br />
-                    Obtain a copy of the PDFill.exe file from the Network Storage ReadOnly folder on the T: drive<br />
-                    <a href="ssPDFill.JPG" class="img-responsive img-rounded" target="popup" onclick="window.open('ssPDFill.JPG', 'popup'); return false;">
-                        <img alt="PDFill" class="img-rounded img-responsive" src="ssPDFill.JPG" width="300" /></a>
-                    <br />
-                    &nbsp;</li>
-                <li>As an alternative to PDFill you can install Adobe Acrobat Professional from the Control Panel.
+                <li>Mac-refer to <a href="https://learn.winona.edu/wiki/Managed_Software_Center" class="bg-info text-white" target="_blank">these instructions</a> or see tech support on how to install Dreamweaver CC.&nbsp;
+                    
+                    
+                <li>As an alternative to for creating PDF files you can install Adobe Acrobat Professional from the Software Additions program.
                 </li>
-                
+                <li>Git-obtained by <a href="https://git-scm.com/" target="_blank" class="bg-info text-white">downloading from the Internet.</a>
+                    <br />
+                    <a href="https://www.linkedin.com/learning/learning-git-and-github/welcome?u=41915348" class="bg-info text-white" target="_blank">Optional: Refer to this LinkedIn Learning tutorial 
+            &quot;Up and Running with Git and GitHub&quot; by Ray Villalobos for more details.</a><br />
+                </li>
             </ol>
             <div class="col-lg-12 text-primary">
                 <p>
-                    (10) 4. After installing all of the required software open the Control Panel. 
-            <br />
-                    In the upper right corner click the drop-down arrow and select 'Small Icons'.
+                    (10) 4. After installing all of the required software open Finder. 
+            
                 </p>
                 <p>
-                    Make sure you are at 'Control Panel&gt;All Control Panel Items&gt;Programs and Features'<br />
-                    Make the window big enough to view all the icons.<br />
-                    For Macs, show the desktop with Finder running.
-            <br />
-                    Use the Snipping Tool or similar to make a screen shot.<br />
-                    Use the <span class="bg-info text-white">Yellow Highlighter Tool</span> and highlight the software listed above.
-                </p>
+                    Make a screen shot showing Dreamweaver installed.<br />
+                                    </p>
                 <p>
                     Save the screen shot  as &quot;Ex4&quot; in your ' <code><span id="dPath"></span></code>
                     <script>document.getElementById("dPath").innerHTML = "OneDrive - MNSCU&#92;" + document.getElementById("class").value + "&#92;" + document.getElementById("assignment").value;; </script>
@@ -459,20 +418,14 @@
 
         <div class="col-lg-12"><a href="#Exercise05" class="btn btn-info" data-toggle="collapse">Exercise 5-Zoom Web Conferencing</a></div>
 
-        <div id="Exercise05" class="collapse in  col-lg-12">
-            <br />
-
-            <p>Using Zoom is important for your career and for assistance from Professor Paulson or the Teaching Assistants.</p>
-
-            <p>Sign in to configure and setup your <a href="https://minnstate.zoom.us" class="bg-info text-white" target="_blank">Zoom account</a> before proceeding.</p>
+ 				<div id="Exercise05" class="collapse in  col-lg-12">
+					<br />
 					<ol>
-						<li>Browse to <a href="https://minnstate.zoom.us/download" target="_blank" class="bg-info text-white">https://minnstate.zoom.us/download</a>&nbsp;&nbsp;&nbsp;&nbsp; to download and install the latest Zoom Client for meetings.</li>
-						<li>Click the Start button, type in &#39;Zoom&#39;, and click to start the Zoom Client</li>
-						<li>Complete single sign on- SSO- using <code>StarID@go.minnstate.edu</code> </li>
-						<li>Use your StarID password</li>
+						<li>Browse to <a href="https://minnstate.zoom.us/download" target="_blank" class="bg-info text-white">https://minnstate.zoom.us/</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Click the &#39;Download Client&#39; link at the bottom of the page to install the latest Zoom Client for meetings.</li>
+						<li>Click the &#39;Sign in&#39; button, your username is&nbsp; <code>StarID@go.minnstate.edu</code> ; password is your WSU network password </li>
 						<li>Note: your Single Sign On screen may be slightly different		
-					<a href="ZoomSSO.JPG" class="img-responsive img-rounded" target="popup" onclick="window.open('ZoomSSO.JPG', 'popup'); return false;">
-						<img src="ZoomSSO.JPG" alt="Zoom Signin" class="img-responsive" width="300" /></a>
+					<a href="ZoomSSO.PNG" class="img-responsive img-rounded" target="popup" onclick="window.open('ZoomSSO.PNG', 'popup'); return false;">
+						<img src="ZoomSSO.PNG" alt="Zoom Signin" class="img-responsive" width="300" /></a>
 							<br />
 						</li>
 
@@ -494,35 +447,35 @@
 							<br />
 						</li>
 
-
 					</ol>
-           <a href="ZoomSSO.JPG" class="img-responsive img-rounded" target="popup" onclick="window.open('ZoomSSO.JPG', 'popup'); return false;">
-                <img src="ZoomSSO.JPG" alt="Zoom Signin" class="img-responsive" width="300" /></a>
-            <br />
-            <a href="ZoomSSO2.pnG" class="img-responsive img-rounded" target="popup" onclick="window.open('ZoomSSO2.pnG', 'popup'); return false;">
-                <img src="ZoomSSO2.pnG" alt="Zoom Signin" class="img-responsive" width="300" /></a>
-            <br />
 
-            <p>
-                In your Zoom account, click the 
+
+					<p>
+						In your Zoom account, click the 
                     &#39;Profile&#39; on the left side and view your profile.<br />
-                Make the window big enough to view all the information shown below.
-            <br />
+						Make the window big enough to view at least the information shown below.<br />
+					</p>
 
-<p>
+					<p>
 						<a href="ZoomProfile.PNG" class="img-responsive img-rounded" target="popup" onclick="window.open('ZoomProfile.PNG', 'popup'); return false;">
 							<img src="ZoomProfile.PNG" alt="Zoom Profile" class="img-responsive" width="300" /></a><br />
 
-					</p>                Use the Snipping Tool to make a screen shot.<br />
-            </p>
-            <p>
-                (10)
-                Save the screen shot  as &quot;Ex5&quot; in your ' <code><span id="ePath"></span></code>
-                <script>document.getElementById("ePath").innerHTML = "OneDrive - MNSCU&#92;" + document.getElementById("class").value + "&#92;" + document.getElementById("assignment").value;; </script>
-                ' folder.<br />
-            </p>
+					</p>
 
-        </div>
+					<p class="text-primary">
+						<strong>(25) 8. Use the Snipping Tool to make a screen shot of your profile.</strong><br />
+					</p>
+
+
+                <p>
+                    Save the screen shot  as &quot;Ex5&quot; in your ' <code><span id="ePath"></span></code>
+                    <script>document.getElementById("ePath").innerHTML = "OneDrive - MNSCU&#92;" + document.getElementById("class").value + "&#92;" + document.getElementById("assignment").value;; </script>
+                    ' folder.<br />
+                </p>
+
+
+
+				</div>
 
 
 
@@ -609,14 +562,6 @@
 
         <div class="col-lg-12"><a href="#Exercise07" class="btn btn-info" data-toggle="collapse">Exercise 7-VPN</a></div>
         <div id="Exercise07" class="collapse in  col-lg-12">
-
-            <p>
-                You may need to contact WSU tech support if you are using a personal computer.  They can provide instructions on how to install VPN on your personally owned computer.
-				<br />
-                Please email: <a href="mailto:techsupport@winona.edu">WSU-Tech Support</a><br />
-                Or call: 507-457-5240
-            </p>
-
             <p>
                 This MUST be done while you are off-campus, or in Somsen 301 using the one network patch cable designated as &#39;VPN&#39;.<br />
                 Using WSU wireless or WSU network connections such as Warrior or Wazoo will not work, but it may work if you use the WSU &#39;guest&#39; wireless network.<br />
@@ -713,7 +658,7 @@
                 3) For your username, use your <code>StarID@winona.edu</code>. Then choose a password and indicate that you are “Student”. Choose your graduation year.
             </p>
             <p>
-                4) You may also have access to the NYT app through <a href="https://learn.winona.edu/wiki/WSU_Apps" target="_blank" class="bg-info text-white">WSU Apps</a>.
+                4) You may also have access to the NYT app through <a href="https://learn.winona.edu/WSU_Apps" target="_blank" class="bg-info text-white">WSU Apps</a>.
             </p>
             <p>
                 <b>*To subscribe, you must sign up on campus.*</b>
@@ -740,7 +685,7 @@
                 <b><i>Wall Street Journal</i></b>
             </p>
             <p>
-                1) Click on this link: <a href="https://libguides.winona.edu/az.php?a=w" target="_blank" class="bg-info text-white">https://libguides.winona.edu/WSJ&nbsp; </a>
+                1) Click on this link: <a href="https://libguides.winona.edu/az.php?a=w" target="_blank" class="bg-info text-white">https://libguides.winona.edu/az.php?a=w</a>
             </p>
             <p>
                 2) Enter your StarID and the password associated with your StarID
@@ -755,7 +700,7 @@
                 5) Repeat these steps every 180 days.
             </p>
             <p>
-                You may also have access to the WSJ app through <a href="https://learn.winona.edu/wiki/WSU_Apps" target="_blank" class="bg-info text-white">WSU Apps</a>.
+                You may also have access to the WSJ app through <a href="https://learn.winona.edu/WSU_Apps" target="_blank" class="bg-info text-white">WSU Apps</a>.
             </p>
             <p>
                 &nbsp;
@@ -845,7 +790,7 @@
                     ' folder.<br />
 
                 </li>
-                <li>Use PDFill (installed in <a href="#Exercise02">Exercise 2</a>) to merge the ScreenShots.pdf file with the Ex7.pdf file created in Exercise 7, and save it as &#39;Formative00.pdf&#39; in your
+                <li>Use PDFill (installed in <a href="#Exercise04">Exercise 4</a>) to merge the ScreenShots.pdf file with the Ex7.pdf file created in Exercise 7, and save it as &#39;Formative00.pdf&#39; in your
 ' <code><span id="mPath"></span></code>
                     <script>document.getElementById("mPath").innerHTML = "OneDrive - MNSCU&#92;" + document.getElementById("class").value + "&#92;" + document.getElementById("assignment").value;; </script>
                     ' folder.<br />
@@ -879,7 +824,8 @@
                 <!-- PgP toDo create js to replace (course) with the course entered into input box at top of page, then can remove subject line screen shot below -->
                 <p>
                     (10) 12. To complete this Exercise <a href="mailto:ppaulson@winona.edu?subject=(course)AssignmentFormative00&amp;body=I%20have%20completd%20AssignmentFormative00%20and%20I%20learnt%20a%20lot." class="bg-info text-white">click this link  </a>&nbsp; and send a professional email to Professor Paulson stating that you have completed Exercise 9 of Assignment Formative00.&nbsp;<br />
-                    Replace (course) in the subject line with the class you are in: MIS342, MIS362, MIS452.&nbsp; Do not have any spaces in your subject line.<br />
+                    Replace (course) in the subject line with the class you are in: MGMT353<br />
+                    Do not have any spaces in your subject line.<br />
                     The subject line must look something like this:<br />
                 </p>
                 <div>
@@ -929,7 +875,7 @@
 
         <div class=" col-lg-12">
             <br />
-            <input class=" text-danger btn-block btn-lg" type="submit" name="Submit" value="SUBMIT">
+            <input class=" text-danger btn-block btn-lg" type="submit" name="Submit" value="SUBMIT -once you have entered your first name, last name, StarID, email, class and section- SUBMIT">
             <br />
         </div>
 
