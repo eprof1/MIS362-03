@@ -404,3 +404,4 @@ Temporary Items
 
 # git/hg backup files
 *.orig
+/website.publishproj
