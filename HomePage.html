@@ -13,46 +13,17 @@
 
     <!-- Bootstrap -->
     <link href="../ReadOnly/bootstrap.css" rel="stylesheet">
-
-    <!-- specific student constant file that contains firstname, lastname, starid -->
-    <script src="constants.js"></script>
-
-    <!-- course constant file that contains semester, class, section pages -->
-    <script src="../ReadOnly/CourseConstants.js"></script>
-
-
-
-
-
-
-
-
-
-
-
-    <style type="text/css">
-        .auto-style1 {
-            height: 26px;
-        }
-    </style>
-
-
-
-
-
-
-
-
-
-
-
 </head>
 
-<body class="container-fluid" onload="setVariables()">
 
-    <div id="xHeading" class=" col-lg-12">
-        <script>document.getElementById("xHeading").innerHTML = pageHeading; </script>
-    </div>
+
+<body onload="setVariables();">
+    
+    <div class="container-fluid" >
+
+     <div id="Heading" class=" col-lg-12">    </div>
+        <div class="col-lg-12"><hr /></div>
+
 
 
     <!-- 
@@ -66,28 +37,39 @@
 
     <div class="col-lg-12">
 
+            <!--  Attendance not needed in asynch online course, but the fields below are needed -->
 
-        <form class="container-fluid col-lg-4" action="https://eprofessor.azurewebsites.net/code/SubmitAttendance.asp" method="post" name="frmAttendance" id="frmAttendance">
 
-            <input class="form-control" name="FirstName" id="FirstName3" type="hidden" value="default first name">
-            <input class="form-control" name="LastName" id="LastName3" type="hidden" value="default last name">
-            <input class="form-control" name="pin3" id="pin3" type="hidden" value="default StarID">
-            <input class="form-control" name="email3" id="email3" type="hidden" value="default email address">
-            <input class="form-control" name="semester" id="semester3" type="hidden" value="default">
-            <input class="form-control" name="class" id="class3" value="xClass" type="hidden">
-            <input class="form-control" name="section" id="section3" value="default" type="hidden">
-            <input class="form-control" name="assignment" id="assignment3" value="Attendance" type="hidden">
-            <input name="InstID" id="InstID3" value="00617282" type="hidden">
+    <!-- ========== Attendance Submission Form ========== -->
+    <form class="container-fluid col-lg-4" action="https://eprofessor.azurewebsites.net/Codex/SubmitAttendance.aspx"
+          method="post" id="frmAttendance" autocomplete="off">
+        <!-- Student & course fields auto-filled by domForms.js -->
+        <input name="FirstName" type="hidden" />
+        <input name="LastName" type="hidden" />
+        <input name="StarID" type="hidden" />
+        <input name="pin" type="hidden" />
+        <input name="email" type="hidden" />
+        <input name="Semester" type="hidden" />
+        <input name="Class" type="hidden" />
+        <input name="Section" type="hidden" />
+        <input name="assignment" value="Attendance" type="hidden" />
+        <input name="InstID" value="00617282" type="hidden" />
 
-            <!--  Attendance not needed in asynch online course
-            <input class="text-danger btn-block btn-lg" type="submit" value="Submit Attendance" />
+        <!--
+        <input class="btn-block btn-lg" type="submit" value="Submit Class Attendance" />
             -->
 
-            <hr />
+        <!-- Attendance form warning area -->
+        <div id="attendanceWarning"></div>
+    </form>
 
-        </form>
 
         <!-- PgP 2/28/2020 End of attendance form  -->
+
+
+
+
+
 
 
         <form class="container-fluid col-lg-4" action="https://eprofessor.azurewebsites.net/code/grading/CourseAssignmentSubmissions.asp" method="post" name="frmAssignment" id="frmAssignment">
@@ -105,29 +87,32 @@
             <input name="InstID" id="InstID" value="00617282" type="hidden">
 
             <!-- -end-Student, class and assignment information-end -->
-            <input class="text-danger btn-block btn-lg" name="Submit" value="Run Assignment Submissions Report" type="submit">
+            <input class="btn-block btn-lg" name="Submit" value="Run Assignment Submissions Report" type="submit">
             <hr />
 
         </form>
 
 
-        <div class="text-center">
-            <!-- PgP 3/2/2020 below is  Java Script generated mail to link -->
-            <div id="emailStudent"></div>
-            <script>document.getElementById("emailStudent").innerHTML = xMailTo</script>
-            <hr />
-        </div>
 
+<!-- ========== Student Email Button Link ========== -->
+<div class="container-fluid col-lg-4">
+    <!-- PgP 3/2/2020: JavaScript-generated mailto link for student/instructor contact -->
+    <a id="emailStudentButton" href="#" 
+       class="btn-lg btn-block text-center"
+        style="border: 1.5px solid #000 "; ">
+    </a>
+    <hr />
+</div>
 
     </div>
 
 
     <div class="col-lg-12 h3">
-        <a href="https://eprofessor.azurewebsites.net/MIS362O/default.asp" class="bg-info text-white" target="_blank">Syllabus</a>
+        <a href="https://eprofessor.azurewebsites.net/MIS362O/default.html"  target="_blank">Syllabus</a>
         &nbsp; &nbsp;
-        <a href="https://winona.learn.minnstate.edu/d2l/home/6335469" class="bg-info text-white" target="_blank">D2L</a> &nbsp; &nbsp;
+        <a href="https://winona.learn.minnstate.edu/d2l/home/7133331"  target="_blank">D2L</a> &nbsp; &nbsp;
 
-        <a class="bg-info text-white" href="https://winona.learn.minnstate.edu/d2l/le/content/6335469/viewContent/63637577/View" target="_blank">MindTap</a>&nbsp;
+        <a href="https://classes.winona.edu/PPaulson/ai/mis362.html" target="_blank">AI Assistant</a>&nbsp;
 		&nbsp; &nbsp;
     </div>
 
@@ -149,7 +134,7 @@
             </tr>
             <tr>
                 <td >1</td>
-                <td  >1/15/24</td>
+                <td  >1/19/26</td>
                 <td ><a href="Formative00PC/Formative00.html">Formative00</a>-PC</td>
                 <td ><a href="Formative00Mac/Formative00.html">Formative00-Mac</a></td>
                 <td >Project01-<a href="https://eprofessor.azurewebsites.net/Code/EntryFormWebsiteURL.asp" class="bg-info text-white" target="_blank">  url to web db </a></td>
@@ -158,7 +143,7 @@
             </tr>
             <tr>
                 <td>2</td>
-                <td>1/22/24</td>
+                <td>1/26/26</td>
                 <td><a href="Formative01/Formative01.html">Formative01</a></td>
                 <td><a href="Summative01/Summative01.html">Summative01</a> </td>
                 <td><a class="bg-info text-white" href="HomePage.PNG" target="_blank">Project01</a>-file to D2L</td>
@@ -167,7 +152,7 @@
             </tr>
             <tr>
                 <td>3</td>
-                <td>1/29/24</td>
+                <td>2/2/26</td>
                 <td><a href="Formative02/Formative02.html">Formative02 </a> </td>
                 <td><a href="Summative02/Summative02.html">Summative02</a> </td>
                 <td><a href="Project02/Project2Idea.html">Project02-Idea </a> </td>
@@ -176,7 +161,7 @@
             </tr>
             <tr>
                 <td>4</td>
-                <td>2/5/24</td>
+                <td>2/9/26</td>
                 <td><a href="Formative03/Formative03.html">Formative03</a> </td>
                 <td><a href="Summative03/Summative03.html">Summative03</a> </td>
                 <td><a href="Project03/Project3Mentor.html">Project03-Mentor
@@ -187,37 +172,35 @@
                 <td>&nbsp;</td>
             </tr>
             <tr>
-                <td class="auto-style1">5</td>
-                <td class="auto-style1">2/12/24</td>
-                <td class="auto-style1"><a href="Formative04/Formative04.html">Formative04</a> </td>
-                <td class="auto-style1"><a href="Summative04/Summative04.html">Summative04</a> </td>
-                <td class="auto-style1"></td>
-                <td class="auto-style1"><a href="Phoenix/Phoenix01.html">Phoenix01</a> </td>
-                <td class="auto-style1"><a href="https://eprofessor.azurewebsites.net/MIS362O/Project04/default.html">Project04-IOT01</a></td>
+                <td  >5</td>
+                <td  >2/16/26</td>
+                <td  >&nbsp;</td>
+                <td  ><a href="Summative04/Summative04.html">Summative04</a> </td>
+                <td  ></td>
+                <td  ><a href="Phoenix/Phoenix01.html">Phoenix01</a> </td>
+                <td  ><a href="https://eprofessor.azurewebsites.net/MIS362O/Project04/default.html">Project04-IOT01</a></td>
             </tr>
             <tr>
                 <td>6</td>
-                <td>2/19/24</td>
-                <td><a href="Formative05/Formative05.html">Formative05</a> </td>
-                <td><a href="Summative05/Summative05.html">Summative05</a> </td>
+                <td>2/23/26</td>
+                <td>&nbsp;<a href="Formative04/Formative04.html">Formative04</a></td>
+                <td>&nbsp;GenerativeAI</td>
                 <td>&nbsp;</td>
-                <td><a href="Phoenix/Phoenix02.html">Phoenix02</a> </td>
-                <td></td>
+                <td><a href="https://eprofessor.azurewebsites.net/MIS362O/Project04/default.html">Project04-IOT02</a></td>
             </tr>
             <tr>
                 <td>7</td>
-                <td>2/26/24</td>
+                <td>3/2/26</td>
+                <td><a href="Formative05/Formative05.html">Formative05</a></td>
+                <td><a href="Summative05/Summative05.html">Summative05</a></td>
                 <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td><a href="https://eprofessor.azurewebsites.net/MIS362O/Project04/default.html">Project04-IOT02<br />
-                    Project04-IOT03</a></td>
+                <td><a href="Phoenix/Phoenix02.html">Phoenix02</a></td>
+                <td><a href="https://eprofessor.azurewebsites.net/MIS362O/Project04/default.html">Project04-IOT03</a></td>
             </tr>
 
             <tr>
                 <td>8</td>
-                <td>3/4/24</td>
+                <td>3/9/26</td>
                 <td><a href="Formative06/Formative06.html">Formative06</a> </td>
                 <td><a href="Summative06/Summative06.html">Summative06</a> </td>
                 <td>&nbsp;</td>
@@ -228,15 +211,15 @@
 
             <tr class="blockquote-reverse alert-success" >
                 <td>9</td>
-                <td>3/11/24</td>
-                <td colspan="4" class="text-center">S P R I N G &nbsp;&nbsp;&nbsp; B R E A K</td>
+                <td>3/16/26</td>
+                <td colspan="5" class="text-center">S P R I N G &nbsp;&nbsp;&nbsp; B R E A K</td>
                 
                 <td>&nbsp; </td>
             </tr>
 
             <tr>
                 <td  >10</td>
-                <td  >3/18/24</td>
+                <td  >3/23/26</td>
                 <td  ><a href="Formative07/Formative07.html">Formative07</a> </td>
                 <td  ><a href="Summative07/Summative07.html">Summative07</a> </td>
                 <td  ><a href="https://eprofessor.azurewebsites.net/MIS362/Project03/default.asp#MentorEmail" class="bg-info text-white" target="_blank">Project03-Email</a>-copy to professor                </td>
@@ -246,7 +229,7 @@
 
             <tr>
                 <td>11</td>
-                <td>3/25/24</td>
+                <td>3/30/26</td>
                 <td><a href="Formative08/Formative08.html">Formative08</a> </td>
                 <td><a href="Summative08/Summative08.html">Summative08</a> </td>
                 <td>&nbsp;</td>
@@ -255,40 +238,40 @@
             </tr>
             <tr>
                 <td>12</td>
-                <td>4/1/24</td>
+                <td>4/6/26</td>
                 <td><a href="Formative09/Formative09.html">Formative09</a> </td>
                 <td><a href="Summative09/Summative09.html">Summative09</a> </td>
                 <td>&nbsp;</td>
-                <td>&nbsp;</td>
+                <td><a href="Phoenix/Phoenix03.html">Phoenix03</a></td>
                 <td><a href="https://eprofessor.azurewebsites.net/MIS362O/Project04/default.html">Project04-IOT07</a></td>
             </tr>
             <tr>
                 <td  >13</td>
-                <td  >4/8/24</td>
+                <td  >4/13/26</td>
                 <td  ><a href="Formative10/Formative10.html">Formative10</a> </td>
                 <td  ><a href="Summative10/Summative10.html">Summative10</a> </td>
                 <td  >&nbsp;</td>
-                <td  ><a href="Phoenix/Phoenix03.html">Phoenix03</a> </td>
+                <td  >&nbsp;</td>
                 <td  ><a href="https://eprofessor.azurewebsites.net/MIS362O/Project04/default.html">Project04-IOT08</a></td>
             </tr>
             <tr>
                 <td>14</td>
-                <td>4/15/24</td>
+                <td>4/20/26</td>
                 <td><a href="Formative11/Formative11.html">Formative11</a> </td>
                 <td><a href="Summative11/Summative11.html">Summative11</a> </td>
                 <td><a href="Project02/Project2Report.html">Project02Report</a>
                     </td>
-                <td>&nbsp;</td>
+                <td><a href="Phoenix/Phoenix04.html">Phoenix04 </a> </td>
                 <td>&nbsp;</td>
             </tr>
             <tr>
                 <td>15</td>
-                <td>4/22/24</td>
+                <td>4/27/26</td>
                 <td><a href="Formative12/Formative12.html">Formative12</a> </td>
                 <td><a href="Summative12/Summative12.html">Summative12</a> </td>
                 <td><a href="Project03/Project3TechnologyImpact.html">Project03TechnologyImpact</a>
                     </td>
-                <td><a href="Phoenix/Phoenix04.html">Phoenix04 </a> </td>
+                <td>&nbsp;</td>
                 <td>&nbsp;</td>
             </tr>
 
@@ -296,7 +279,7 @@
 
             <tr>
                 <td>16</td>
-                <td>4/29/24</td>
+                <td>5/4/26</td>
                 <td><a href="Formative13/Formative13.html">Formative13</a> </td>
                 <td>&nbsp;</td>
                 <td><a href="Project03/Project3Report.html">Project03FinalReport</a> </td>
@@ -320,21 +303,167 @@
     <hr />
 
 
-    <!-- Creative Commons License Info -->
-    <div id="xLicense" class=" col-lg-12 text-muted"></div>
-    <script>document.getElementById("xLicense").innerHTML = ccLicense; </script>
 
-    <div id="xfooter" class=" col-lg-12 text-muted"></div>
-    <script>document.getElementById("xfooter").innerHTML = Date(); </script>
-
+    <footer>
+        <div id="licenseInfo" class="col-lg-12 text-muted"></div>
+        <div id="footerText" class="col-lg-12 text-muted"></div>
+    </footer>
 
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<!-- ========== Script Includes (Order is Critical) ========== -->
+<script src="../ReadOnly/jquery-1.js"></script>
+<script src="../ReadOnly/bootstrap.js"></script>
+
+<!-- Student identity source of truth -->
+<script src="constants.js"></script>
+<!-- do not use <script src="studentConstants.js"></script> -->
+
+
+
+<script>
+    // constants.js is the single source of truth (xFirstName/xLastName/xStarID).
+    // HomePage/domForms.js expects FirstName/LastName/StarID/pin, so alias them.
+    window.FirstName = window.xFirstName;
+    window.LastName = window.xLastName;
+    window.StarID = window.xStarID;
+    window.pin = window.xStarID;
+
+    // Primary email rule
+    window.studentEmailAddress = (window.StarID ? (String(window.StarID).trim() + "@go.minnstate.edu") : "");
+</script>
+
+
+
+
+
+
+
+
+
+
+<!-- Bridge studentConstants.js -> legacy vars used by CourseConstants/domForms -->
+<script>
+    // Alias ONLY (no literals, no initialization elsewhere)
+    window.xFirstName = window.FirstName;
+    window.xLastName = window.LastName;
+    window.xStarID = window.StarID;
+
+    // If any other scripts expect this, define it consistently:
+    window.studentEmailAddress = (window.xStarID ? (String(window.xStarID).trim() + "@go.minnstate.edu") : "");
+</script>
+
+<!-- Course-wide constants (note filename case) -->
+<script src="../ReadOnly/CourseConstants.js"></script>
+
+<!-- If you still need domForms behavior on HomePage, keep it -->
+<script src="../ReadOnly/domForms.js"></script>
+
+<!-- Build the Student Email mailto button -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var btn = document.getElementById("emailStudentButton");
+        if (!btn) return;
+
+        var email = window.studentEmailAddress || "";
+        if (!email) {
+            btn.textContent = "Email: (set your StarID in studentConstants.js)";
+            btn.href = "#";
+            return;
+        }
+
+        // Optional: include a helpful subject line
+        var subject = "";
+        if (window.xClass && window.xSection && window.xSemester) {
+            subject = encodeURIComponent(
+                window.xClass + "-" + window.xSection + " " + window.xSemester + "-" +
+                (window.xFirstName || "") + " " + (window.xLastName || "")
+            );
+        }
+
+        btn.textContent = email;
+        btn.href = "mailto:" + email + (subject ? ("?subject=" + subject) : "");
+    });
+</script>
+
+
+<!-- allows Assignment Submission Report to run without breaking domForms -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var f = document.getElementById("frmAssignmentReport");
+        if (!f) return;
+
+        f.addEventListener("submit", function () {
+            // Copy course vars into the names that AssignmentSubmissionReport.aspx expects
+            var sem = f.querySelector('input[name="semester"]');
+            var sec = f.querySelector('input[name="txtSection"]');
+
+            if (sem && window.xSemester) sem.value = window.xSemester;
+            if (sec && window.xSection) sec.value = window.xSection;
+
+            // Optional: if you want txtAssignment to be dynamic, set it here
+            var a = f.querySelector('input[name="txtAssignment"]');
+            if (a && !a.value) a.value = "ALL";
+        });
+    });
+</script>
+
+
+
+<script>
+
+    //PgP 1/7/2026 trying to get AssignmentSubmissionReport.aspx to 'see' expected values
+    // already present:
+    window.xFirstName = window.FirstName;
+    window.xLastName = window.LastName;
+    window.xStarID = window.StarID;
+
+    // ADD: satisfy domForms.js variable expectations
+    window.pin = window.xStarID;
+    window.Class = window.xClass;
+    window.Section = window.xSection;
+    window.Semester = window.xSemester;
+
+    // prevent Heading from being overwritten with "undefined"
+    window.pageHeading = document.getElementById("Heading")?.innerHTML || "";
+</script>
+
+
+<script>
+    //PgP 1/7/2026 powers button in frmAssignmentSubmissionReport to figure out why sql returns nothing
+    document.addEventListener("DOMContentLoaded", function () {
+        var f = document.getElementById("frmAssignmentReport");
+        var btn = document.getElementById("btnReportAll");
+        if (!f || !btn) return;
+
+        btn.addEventListener("click", function () {
+            // Force wildcard match on server: LIKE '%%'
+            var classField = f.querySelector('input[name="Class"]');
+            var secField = f.querySelector('input[name="txtSection"]');
+
+            if (classField) classField.value = "";
+            if (secField) secField.value = "";
+
+            f.submit();
+        });
+    });
+</script>
+
+
+
+
+
+    <!-- ========== Script Includes (Order is Critical) ==========   old version prior to 1/7/2026
     <script src="../ReadOnly/jquery-1.js"></script>
-
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="../ReadOnly/bootstrap.js"></script>
+    <script src="studentConstants.js"></script>
+    <script src="../ReadOnly/courseConstants.js"></script>
+    <script src="../ReadOnly/domForms.js"></script>
+-->
 
+
+
+
+        </div>
 </body>
 
 </html>
